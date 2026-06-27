@@ -1,0 +1,222 @@
+# Day 03 - Number Systems
+
+## Module
+Phase 0 - Computer Science Foundations
+
+## Topics Covered
+
+- Number System
+- Decimal Number System
+- Binary Number System
+- Octal Number System
+- Hexadecimal Number System
+- Binary to Decimal Conversion
+- Decimal to Binary Conversion
+
+---
+
+# What is a Number System?
+
+A number system is a method of representing numbers using a set of digits.
+
+Different number systems use different bases.
+
+---
+
+# Types of Number Systems
+
+| Number System | Base | Digits |
+|--------------|------|---------|
+| Decimal | 10 | 0–9 |
+| Binary | 2 | 0,1 |
+| Octal | 8 | 0–7 |
+| Hexadecimal | 16 | 0–9, A–F |
+
+---
+
+# Decimal Number System
+
+- Base = 10
+- Digits = 0 to 9
+- Used by humans in everyday life.
+
+Example:
+
+548
+
+= (5 × 10²) + (4 × 10¹) + (8 × 10⁰)
+
+= 500 + 40 + 8
+
+= 548
+
+---
+
+# Binary Number System
+
+- Base = 2
+- Digits = 0 and 1
+- Used by computers because electronic circuits have two stable states:
+  - ON = 1
+  - OFF = 0
+
+Example:
+
+1011₂
+
+= (1 × 2³) + (0 × 2²) + (1 × 2¹) + (1 × 2⁰)
+
+= 8 + 0 + 2 + 1
+
+= 11₁₀
+
+---
+
+# Binary Place Values
+
+| Power | Value |
+|--------|-------|
+|2⁰|1|
+|2¹|2|
+|2²|4|
+|2³|8|
+|2⁴|16|
+|2⁵|32|
+|2⁶|64|
+|2⁷|128|
+
+---
+
+# Octal Number System
+
+- Base = 8
+- Digits = 0 to 7
+
+Example:
+
+17₈
+
+= (1 × 8¹) + (7 × 8⁰)
+
+= 8 + 7
+
+= 15₁₀
+
+---
+
+# Hexadecimal Number System
+
+- Base = 16
+- Digits = 0–9 and A–F
+
+| Letter | Value |
+|---------|-------|
+|A|10|
+|B|11|
+|C|12|
+|D|13|
+|E|14|
+|F|15|
+
+Example:
+
+1A₁₆
+
+= (1 × 16¹) + (10 × 16⁰)
+
+= 16 + 10
+
+= 26₁₀
+
+---
+
+# Binary to Decimal Conversion
+
+Multiply each binary digit by its corresponding power of 2 and add the results.
+
+Example:
+
+11001₂
+
+= (1 × 16) + (1 × 8) + (0 × 4) + (0 × 2) + (1 × 1)
+
+= 25
+
+---
+
+# Decimal to Binary Conversion
+
+Steps:
+
+1. Divide the decimal number by 2.
+2. Record the remainder.
+3. Continue dividing the quotient by 2 until it becomes 0.
+4. Read the remainders from bottom to top.
+
+Example:
+
+13
+
+13 ÷ 2 = 6 remainder 1
+
+6 ÷ 2 = 3 remainder 0
+
+3 ÷ 2 = 1 remainder 1
+
+1 ÷ 2 = 0 remainder 1
+
+Binary = 1101
+
+---
+
+# Important Definitions
+
+### Number System
+
+A method of representing numbers using a set of digits.
+
+### Decimal Number System
+
+A base-10 number system used by humans.
+
+### Binary Number System
+
+A base-2 number system that uses only 0 and 1.
+
+### Octal Number System
+
+A base-8 number system that uses digits 0 to 7.
+
+### Hexadecimal Number System
+
+A base-16 number system that uses digits 0–9 and letters A–F.
+
+---
+
+# Important Points
+
+- Computers use the binary number system.
+- Decimal numbers use base 10.
+- Binary numbers use base 2.
+- Octal numbers use base 8.
+- Hexadecimal numbers use base 16.
+- Binary to Decimal → Multiply by powers of 2.
+- Decimal to Binary → Repeated division by 2.
+
+---
+
+# Interview Questions
+
+1. What is a number system?
+2. Why do computers use binary?
+3. What is the base of binary?
+4. What is the base of hexadecimal?
+5. What digits are used in hexadecimal?
+6. Convert binary to decimal.
+7. Convert decimal to binary.
+
+---
+
+# Summary
+
+Today I learned about different number systems used in computers. I understood Decimal, Binary, Octal, and Hexadecimal number systems. I also learned how to convert Binary to Decimal using powers of 2 and Decimal to Binary using repeated division by 2. I now understand why computers use the binary number system.
