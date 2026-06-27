@@ -1,0 +1,331 @@
+# Day 04 - Operating System Fundamentals
+
+## Module
+Phase 0 - Computer Science Foundations
+
+---
+
+# What is an Operating System?
+
+An Operating System (OS) is system software that acts as an interface between the user, application software, and computer hardware. It manages hardware resources and provides services to programs.
+
+### Examples
+
+- Windows
+- Linux
+- macOS
+- Android
+- iOS
+
+---
+
+# Why Do We Need an Operating System?
+
+Without an Operating System, a computer cannot run applications or manage hardware.
+
+The Operating System provides:
+
+- Process Management
+- Memory Management
+- File Management
+- Device Management
+- Security and Permissions
+
+---
+
+# Functions of an Operating System
+
+## 1. Process Management
+
+- Creates processes
+- Schedules CPU execution
+- Terminates processes
+
+Example:
+Opening Google Chrome.
+
+---
+
+## 2. Memory Management
+
+The Operating System:
+
+- Allocates RAM to programs
+- Frees memory when programs close
+- Prevents memory conflicts
+
+---
+
+## 3. File Management
+
+The OS manages:
+
+- Files
+- Folders
+- Storage devices
+- Permissions
+
+Example:
+
+C:\Users\Krishna\Documents
+
+---
+
+## 4. Device Management
+
+The Operating System controls hardware devices such as:
+
+- Keyboard
+- Mouse
+- Printer
+- Webcam
+- Speakers
+
+---
+
+## 5. Security
+
+The Operating System provides:
+
+- User accounts
+- Password protection
+- Access permissions
+- File security
+
+---
+
+# Kernel
+
+The Kernel is the core part of the Operating System.
+
+It communicates directly with the hardware and manages system resources.
+
+### Communication Flow
+
+User
+
+↓
+
+Application
+
+↓
+
+Operating System
+
+↓
+
+Kernel
+
+↓
+
+Hardware
+
+---
+
+# User Mode and Kernel Mode
+
+## User Mode
+
+Applications run in User Mode.
+
+Examples:
+
+- Chrome
+- VS Code
+- Java Programs
+
+Applications cannot directly access hardware.
+
+---
+
+## Kernel Mode
+
+The Operating System runs in Kernel Mode.
+
+The Kernel can directly access:
+
+- CPU
+- RAM
+- Storage
+- Hardware Devices
+
+---
+
+# Program vs Process
+
+## Program
+
+A program is a file stored on secondary storage (SSD/HDD).
+
+Example:
+
+Chrome.exe
+
+A program is passive because it is not running.
+
+---
+
+## Process
+
+A process is a running instance of a program loaded into memory.
+
+Example:
+
+Chrome.exe
+
+↓
+
+Double-click
+
+↓
+
+Chrome Process
+
+A process is active because it is executing.
+
+---
+
+# Program vs Process
+
+| Program | Process |
+|----------|----------|
+| Stored on disk | Running in memory |
+| Passive | Active |
+| Does not execute | Executes using CPU and RAM |
+
+---
+
+# Process Life Cycle
+
+New
+
+↓
+
+Ready
+
+↓
+
+Running
+
+↓
+
+Waiting
+
+↓
+
+Running
+
+↓
+
+Terminated
+
+---
+
+# Multitasking
+
+Multitasking is the ability of an Operating System to run multiple applications by rapidly switching the CPU between them.
+
+Example:
+
+- Chrome
+- VS Code
+- Spotify
+- IntelliJ IDEA
+
+running together.
+
+---
+
+# Thread
+
+A Thread is the smallest unit of execution inside a process.
+
+A process can have one or more threads.
+
+Example:
+
+Chrome Process
+
+├── Thread 1
+
+├── Thread 2
+
+├── Thread 3
+
+└── Thread 4
+
+---
+
+# Important Definitions
+
+## Operating System
+
+System software that manages hardware resources and provides services to programs.
+
+## Kernel
+
+The core part of the Operating System that directly communicates with hardware.
+
+## Program
+
+A set of instructions stored on disk.
+
+## Process
+
+A running instance of a program loaded into memory.
+
+## Thread
+
+The smallest unit of execution within a process.
+
+---
+
+# Important Points
+
+- Operating System acts as an interface between the user and hardware.
+- Kernel is the core part of the Operating System.
+- Applications run in User Mode.
+- The Kernel runs in Kernel Mode.
+- Programs become processes when executed.
+- A process can contain multiple threads.
+- The Operating System manages CPU, memory, files, devices, and security.
+
+---
+
+# Common Interview Mistakes
+
+❌ Program and Process are the same.
+
+✅ A program is stored on disk, while a process is a running program in memory.
+
+---
+
+❌ Kernel is the entire Operating System.
+
+✅ Kernel is the core part of the Operating System.
+
+---
+
+❌ One process can have only one thread.
+
+✅ A process can have multiple threads.
+
+---
+
+# Interview Questions
+
+1. What is an Operating System?
+2. Why is an Operating System required?
+3. What are the main functions of an Operating System?
+4. What is the Kernel?
+5. Explain User Mode and Kernel Mode.
+6. Differentiate between Program and Process.
+7. What is a Thread?
+8. What is Multitasking?
+9. Can a process contain multiple threads?
+
+---
+
+# Summary
+
+Today I learned the fundamentals of the Operating System. I understood how the OS acts as an interface between users and hardware, the role of the Kernel, the difference between a Program and a Process, what a Thread is, how multitasking works, and the main responsibilities of an Operating System such as process management, memory management, file management, device management, and security.
