@@ -1,0 +1,316 @@
+# Day 05 - Computer Memory
+
+## Module
+Phase 0 - Computer Science Foundations
+
+---
+
+# What is Computer Memory?
+
+Computer memory is used to store data and instructions so that the CPU can execute programs.
+
+Different types of memory have different speeds, sizes, and purposes.
+
+---
+
+# Memory Hierarchy
+
+Memory is organized from fastest to slowest.
+
+Registers
+
+↓
+
+Cache Memory
+
+↓
+
+RAM
+
+↓
+
+Secondary Storage (SSD/HDD)
+
+---
+
+# Registers
+
+Registers are the smallest and fastest memory inside the CPU.
+
+They store the data and instructions currently being processed by the CPU.
+
+### Features
+
+- Fastest memory
+- Very small in size
+- Located inside the CPU
+
+---
+
+# Cache Memory
+
+Cache memory stores frequently used data and instructions.
+
+It is located between the CPU and RAM to reduce the time taken to access data.
+
+### Types
+
+- L1 Cache (Fastest)
+- L2 Cache
+- L3 Cache
+
+---
+
+# RAM (Random Access Memory)
+
+RAM is the primary memory used to store running programs and data.
+
+### Features
+
+- Volatile memory
+- Temporary storage
+- Fast
+- Stores running applications
+
+Examples:
+
+- Chrome
+- VS Code
+- IntelliJ IDEA
+
+---
+
+# ROM (Read Only Memory)
+
+ROM is non-volatile memory.
+
+It stores firmware such as BIOS/UEFI.
+
+Its contents are not lost when the computer is turned off.
+
+---
+
+# Secondary Storage
+
+Examples:
+
+- SSD
+- HDD
+
+Purpose:
+
+- Stores files permanently
+- Stores Operating System
+- Stores Java projects
+- Stores applications
+- Stores documents
+
+---
+
+# Stack Memory
+
+Stack memory stores:
+
+- Method calls
+- Local variables
+- Reference variables
+
+### Features
+
+- Very fast
+- Uses LIFO (Last In First Out)
+- Automatically managed
+
+Example:
+
+```java
+int age = 20;
+```
+
+`age` is stored in the Stack.
+
+---
+
+# Heap Memory
+
+Heap memory stores:
+
+- Objects
+- Arrays
+
+Example:
+
+```java
+Student s = new Student();
+```
+
+- `s` (reference variable) → Stack
+- `Student` object → Heap
+
+### Features
+
+- Larger than Stack
+- Slower than Stack
+- Managed by Garbage Collector
+
+---
+
+# Stack vs Heap
+
+| Stack | Heap |
+|--------|------|
+| Stores local variables | Stores objects |
+| Stores method calls | Stores arrays |
+| Faster | Slower |
+| Uses LIFO | Managed by Garbage Collector |
+| Smaller | Larger |
+
+---
+
+# RAM vs ROM
+
+| RAM | ROM |
+|-----|-----|
+| Random Access Memory | Read Only Memory |
+| Volatile | Non-Volatile |
+| Temporary | Permanent |
+| Stores running programs | Stores firmware |
+
+---
+
+# RAM vs SSD
+
+| RAM | SSD |
+|-----|-----|
+| Temporary | Permanent |
+| Volatile | Non-Volatile |
+| Stores running programs | Stores files permanently |
+
+---
+
+# Memory Example
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        int age = 20;
+
+        Student s = new Student();
+
+    }
+
+}
+```
+
+Memory:
+
+Stack
+
+- main()
+- age = 20
+- reference variable `s`
+
+Heap
+
+- Student Object
+
+---
+
+# Industry Connection
+
+Understanding Stack and Heap is essential for:
+
+- Java Variables
+- Objects
+- Methods
+- Recursion
+- Garbage Collection
+- JVM Memory
+- Java Interview Questions
+
+---
+
+# Important Definitions
+
+## Registers
+
+The fastest memory located inside the CPU that stores the data currently being processed.
+
+---
+
+## Cache Memory
+
+Memory that stores frequently used data to reduce CPU access time.
+
+---
+
+## RAM
+
+Temporary memory used to store running programs and data.
+
+---
+
+## ROM
+
+Permanent memory used to store firmware.
+
+---
+
+## Stack Memory
+
+Memory used to store method calls, local variables, and reference variables.
+
+---
+
+## Heap Memory
+
+Memory used to store objects and arrays.
+
+---
+
+# Common Interview Mistakes
+
+❌ Objects are stored in Stack.
+
+✅ Objects are stored in Heap.
+
+---
+
+❌ Reference variables are stored in Heap.
+
+✅ Reference variables are stored in Stack.
+
+---
+
+❌ RAM stores files permanently.
+
+✅ RAM stores data temporarily while programs are running.
+
+---
+
+❌ ROM stores user files.
+
+✅ ROM stores firmware such as BIOS/UEFI.
+
+---
+
+# Interview Questions
+
+1. What is computer memory?
+2. Explain the memory hierarchy.
+3. Which memory is the fastest?
+4. Difference between RAM and ROM.
+5. Difference between RAM and SSD.
+6. Difference between Stack and Heap.
+7. Why is Stack faster than Heap?
+8. Where are local variables stored?
+9. Where are Java objects stored?
+10. Where is the reference variable stored?
+
+---
+
+# Summary
+
+Today I learned about the different types of computer memory and their purposes. I understood the memory hierarchy, the role of Registers, Cache, RAM, ROM, and Secondary Storage. I also learned the difference between Stack and Heap memory, where Java local variables, reference variables, and objects are stored, and why Stack memory is faster than Heap memory.
