@@ -1,0 +1,454 @@
+# Day 07 - Git & GitHub
+
+## Module
+
+Phase 0 - Computer Science Foundations
+
+---
+
+# What is Git?
+
+Git is a Distributed Version Control System (DVCS).
+
+It tracks changes in source code and allows multiple developers to work on the same project.
+
+---
+
+# What is GitHub?
+
+GitHub is a cloud-based platform used to host Git repositories.
+
+It allows developers to collaborate, share code, and maintain version history.
+
+---
+
+# Git vs GitHub
+
+| Git | GitHub |
+|------|---------|
+| Version Control System | Cloud Hosting Platform |
+| Installed on Local Computer | Works on the Internet |
+| Tracks Code Changes | Stores Git Repositories |
+| Can Work Without GitHub | Uses Git |
+
+---
+
+# Repository
+
+A Repository (Repo) is a project folder tracked by Git.
+
+Types:
+
+- Local Repository
+- Remote Repository
+
+---
+
+# Local Repository
+
+Repository stored on your computer.
+
+---
+
+# Remote Repository
+
+Repository stored on GitHub.
+
+---
+
+# Git Workflow
+
+Working Directory
+
+↓
+
+git add
+
+↓
+
+Staging Area
+
+↓
+
+git commit
+
+↓
+
+Local Repository
+
+↓
+
+git push
+
+↓
+
+GitHub
+
+---
+
+# Important Git Commands
+
+## Check Git Version
+
+```bash
+git --version
+```
+
+Example
+
+```bash
+git --version
+```
+
+Output
+
+```text
+git version 2.xx.x
+```
+
+---
+
+## Initialize a Repository
+
+```bash
+git init
+```
+
+Creates a new Git repository.
+
+Example
+
+```bash
+git init
+```
+
+---
+
+## Check Repository Status
+
+```bash
+git status
+```
+
+Shows modified, staged and untracked files.
+
+---
+
+## Add One File
+
+```bash
+git add Main.java
+```
+
+---
+
+## Add All Files
+
+```bash
+git add .
+```
+
+Stages all modified files.
+
+---
+
+## Commit Changes
+
+```bash
+git commit -m "Added Login Feature"
+```
+
+Creates a snapshot of the project.
+
+---
+
+## View Commit History
+
+```bash
+git log
+```
+
+Shows all commits.
+
+---
+
+## Push Changes
+
+```bash
+git push
+```
+
+Uploads local commits to GitHub.
+
+---
+
+## Pull Latest Changes
+
+```bash
+git pull
+```
+
+Downloads changes from GitHub.
+
+---
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+Example
+
+```bash
+git clone https://github.com/user/project.git
+```
+
+Copies the repository to your computer.
+
+---
+
+## Create New Branch
+
+```bash
+git branch feature-login
+```
+
+---
+
+## View All Branches
+
+```bash
+git branch
+```
+
+---
+
+## Switch Branch
+
+```bash
+git checkout feature-login
+```
+
+or
+
+```bash
+git switch feature-login
+```
+
+---
+
+## Create and Switch Branch
+
+```bash
+git checkout -b feature-login
+```
+
+---
+
+## Merge Branch
+
+```bash
+git merge feature-login
+```
+
+Merges the feature branch into the current branch.
+
+---
+
+# .gitignore
+
+Used to ignore files and folders that should not be tracked by Git.
+
+Example
+
+```text
+*.class
+node_modules/
+target/
+.idea/
+.env
+```
+
+---
+
+# Important Definitions
+
+## Git
+
+Distributed Version Control System.
+
+---
+
+## GitHub
+
+Cloud platform that hosts Git repositories.
+
+---
+
+## Commit
+
+A snapshot of the project saved in the local repository.
+
+---
+
+## Push
+
+Uploads committed changes to GitHub.
+
+---
+
+## Pull
+
+Downloads the latest changes from GitHub.
+
+---
+
+## Clone
+
+Copies a remote repository to the local computer.
+
+---
+
+## Branch
+
+An independent line of development.
+
+---
+
+## Merge
+
+Combines changes from one branch into another.
+
+---
+
+# Industry Workflow
+
+Clone Repository
+
+↓
+
+Create Branch
+
+↓
+
+Write Code
+
+↓
+
+git add
+
+↓
+
+git commit
+
+↓
+
+git push
+
+↓
+
+Pull Request
+
+↓
+
+Code Review
+
+↓
+
+Merge
+
+---
+
+# Common Interview Questions
+
+1. What is Git?
+2. What is GitHub?
+3. Difference between Git and GitHub.
+4. Difference between Commit and Push.
+5. Difference between Clone and Pull.
+6. What is a Branch?
+7. What is Merge?
+8. What is .gitignore?
+9. Explain the Git workflow.
+10. Why do companies use Git?
+
+---
+
+# Common Interview Mistakes
+
+❌ Git and GitHub are the same.
+
+✅ Git is a Version Control System.
+
+GitHub is a Cloud Hosting Platform.
+
+---
+
+❌ Commit uploads files to GitHub.
+
+✅ Commit saves changes locally.
+
+Push uploads them.
+
+---
+
+❌ Pull and Clone are the same.
+
+✅ Clone copies a repository for the first time.
+
+Pull updates an existing repository.
+
+---
+
+# Revision Box
+
+✅ Git → Version Control
+
+✅ GitHub → Cloud Repository
+
+✅ Commit → Local Snapshot
+
+✅ Push → Upload Changes
+
+✅ Pull → Download Changes
+
+✅ Clone → Copy Repository
+
+✅ Branch → Separate Development
+
+✅ Merge → Combine Branches
+
+---
+
+# Commands Cheat Sheet
+
+git init
+
+git status
+
+git add .
+
+git commit -m "message"
+
+git push
+
+git pull
+
+git clone <url>
+
+git branch
+
+git checkout branch-name
+
+git checkout -b new-branch
+
+git merge branch-name
+
+git log
+
+---
+
+# Summary
+
+Today I learned Git and GitHub, the Git workflow, repositories, branches, commits, pushes, pulls, cloning, merging, and the most commonly used Git commands used by software engineers in real projects.
