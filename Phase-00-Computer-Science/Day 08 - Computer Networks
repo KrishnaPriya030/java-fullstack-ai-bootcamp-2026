@@ -1,0 +1,430 @@
+# Day 08 - Computer Networks
+
+## Module
+
+Phase 0 - Computer Science Foundations
+
+---
+
+# Prerequisites
+
+- Computer Basics
+- Operating System
+
+---
+
+# Learning Objectives
+
+- Understand Computer Networks
+- Types of Networks
+- Internet
+- IP Address
+- MAC Address
+- DNS
+- Router
+- Switch
+- Modem
+- Ports
+- Client and Server
+
+---
+
+# What is a Computer Network?
+
+A Computer Network is a collection of two or more computers or devices connected together to share data, resources, and services.
+
+Examples:
+
+- Laptop ↔ Mobile
+- Laptop ↔ Printer
+- Browser ↔ Web Server
+
+---
+
+# Why Do We Need Networks?
+
+Computer networks allow us to:
+
+- Share files
+- Access the Internet
+- Communicate with other devices
+- Share printers and other hardware
+- Build client-server applications
+
+Without networks:
+
+- No Internet
+- No GitHub
+- No WhatsApp
+- No Spring Boot APIs
+
+---
+
+# Types of Networks
+
+## LAN (Local Area Network)
+
+A network that covers a small geographical area.
+
+Examples:
+
+- Home Wi-Fi
+- School Computer Lab
+- Office Network
+
+---
+
+## MAN (Metropolitan Area Network)
+
+A network that covers an entire city.
+
+Example:
+
+- City Cable Network
+
+---
+
+## WAN (Wide Area Network)
+
+A network that covers countries or continents.
+
+Example:
+
+- Internet
+
+---
+
+# Internet
+
+The Internet is a global network of interconnected computer networks.
+
+It connects millions of devices across the world.
+
+---
+
+# IP Address (Internet Protocol Address)
+
+An IP Address is a logical address used to identify and locate a device on a network.
+
+Example:
+
+192.168.1.5
+
+Characteristics:
+
+- Logical Address
+- Can change
+- Used for communication
+
+---
+
+# MAC Address (Media Access Control Address)
+
+A MAC Address is the unique physical address assigned to a network interface by the manufacturer.
+
+Characteristics:
+
+- Physical Address
+- Usually permanent
+- Unique for every network device
+
+---
+
+# Difference Between IP Address and MAC Address
+
+| IP Address | MAC Address |
+|------------|-------------|
+| Logical Address | Physical Address |
+| Can change | Usually permanent |
+| Identifies a device on a network | Identifies the hardware |
+
+---
+
+# DNS (Domain Name System)
+
+DNS converts a domain name into an IP address.
+
+Example:
+
+google.com
+
+↓
+
+DNS
+
+↓
+
+142.xxx.xxx.xxx
+
+Without DNS, users would need to remember IP addresses instead of domain names.
+
+---
+
+# Router
+
+A Router connects different networks.
+
+Example:
+
+Home Network
+
+↓
+
+Router
+
+↓
+
+Internet
+
+---
+
+# Switch
+
+A Switch connects multiple devices within the same network.
+
+Example:
+
+- Computer
+- Printer
+- Laptop
+
+connected inside an office network.
+
+---
+
+# Modem
+
+A Modem connects your home or office network to your Internet Service Provider (ISP).
+
+Without a modem, you cannot access the Internet provided by your ISP.
+
+---
+
+# Port
+
+A Port identifies a specific application or service running on a device.
+
+Example:
+
+192.168.1.5:8080
+
+- IP Address → Device
+- Port → Application
+
+Common Ports
+
+| Port | Service |
+|------|---------|
+| 80 | HTTP |
+| 443 | HTTPS |
+| 22 | SSH |
+| 3306 | MySQL |
+| 5432 | PostgreSQL |
+| 8080 | Spring Boot (Development) |
+
+---
+
+# Client and Server
+
+## Client
+
+A client requests services.
+
+Examples:
+
+- Browser
+- React Application
+- Mobile App
+
+---
+
+## Server
+
+A server provides services.
+
+Examples:
+
+- Spring Boot Application
+- Database Server
+- Web Server
+
+---
+
+# What Happens When We Type "google.com"?
+
+Browser
+
+↓
+
+DNS
+
+↓
+
+IP Address
+
+↓
+
+Google Server
+
+↓
+
+Response
+
+↓
+
+Browser Displays the Web Page
+
+---
+
+# Industry Connection
+
+When we build Spring Boot applications, we use URLs like:
+
+http://localhost:8080/api/students
+
+Where:
+
+- localhost → Host Name
+- 8080 → Port Number
+- /api/students → API Endpoint
+
+Understanding networking helps us understand how web applications communicate.
+
+---
+
+# Important Definitions
+
+## Computer Network
+
+A group of connected devices that communicate and share resources.
+
+---
+
+## Internet
+
+A global network of interconnected computer networks.
+
+---
+
+## IP Address
+
+A logical address used to identify and locate a device.
+
+---
+
+## MAC Address
+
+A unique physical address assigned to a network device.
+
+---
+
+## DNS
+
+Converts domain names into IP addresses.
+
+---
+
+## Router
+
+Connects different networks.
+
+---
+
+## Switch
+
+Connects devices within the same network.
+
+---
+
+## Port
+
+Identifies a specific application or service running on a device.
+
+---
+
+## Client
+
+Requests services from a server.
+
+---
+
+## Server
+
+Provides services to clients.
+
+---
+
+# Common Interview Mistakes
+
+❌ Internet and Web are the same.
+
+✅ The Internet is the network. The Web is a service that runs on the Internet.
+
+---
+
+❌ IP Address and MAC Address are the same.
+
+✅ IP is a logical address, while MAC is a physical address.
+
+---
+
+❌ Router and Switch perform the same function.
+
+✅ Router connects networks, while a Switch connects devices within the same network.
+
+---
+
+❌ A Port identifies a device.
+
+✅ A Port identifies an application or service running on a device.
+
+---
+
+# Interview Questions
+
+1. What is a Computer Network?
+2. Explain LAN, MAN, and WAN.
+3. What is the Internet?
+4. What is an IP Address?
+5. What is a MAC Address?
+6. Difference between IP Address and MAC Address.
+7. What is DNS?
+8. What is a Router?
+9. What is a Switch?
+10. What is a Port?
+11. Difference between Client and Server.
+12. Explain what happens when you type "google.com" in a browser.
+
+---
+
+# Revision Box
+
+✅ LAN → Small Area
+
+✅ MAN → City
+
+✅ WAN → Worldwide
+
+✅ Internet → Global Network
+
+✅ IP Address → Logical Address
+
+✅ MAC Address → Physical Address
+
+✅ DNS → Domain Name → IP Address
+
+✅ Router → Connects Networks
+
+✅ Switch → Connects Devices
+
+✅ Port → Identifies an Application
+
+✅ Client → Requests Services
+
+✅ Server → Provides Services
+
+---
+
+# Summary
+
+Today I learned the fundamentals of Computer Networks. I understood the different types of networks, the purpose of the Internet, IP Address, MAC Address, DNS, Router, Switch, Modem, Ports, and the Client-Server model. I also learned how a browser accesses a website by using DNS to convert a domain name into an IP address before communicating with the server.
