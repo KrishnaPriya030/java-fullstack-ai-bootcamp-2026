@@ -1,0 +1,596 @@
+# Day 09 - HTTP & HTTPS
+
+## Module
+
+Phase 0 - Computer Science Foundations
+
+---
+
+# Prerequisites
+
+- Computer Networks
+- Client and Server
+- IP Address
+- DNS
+- Ports
+
+---
+
+# Learning Objectives
+
+- Understand HTTP
+- Understand HTTPS
+- HTTP Request and Response
+- HTTP Methods
+- HTTP Status Codes
+- URL Structure
+- Headers
+- Stateless Protocol
+- Browser to Server Communication
+
+---
+
+# What is HTTP?
+
+HTTP (HyperText Transfer Protocol) is an application-layer protocol used for communication between a client and a server.
+
+It allows clients (such as browsers or mobile applications) to send requests to servers and receive responses.
+
+Example:
+
+Browser
+
+↓
+
+HTTP Request
+
+↓
+
+Server
+
+↓
+
+HTTP Response
+
+↓
+
+Browser Displays Web Page
+
+---
+
+# What is HTTPS?
+
+HTTPS (HyperText Transfer Protocol Secure) is the secure version of HTTP.
+
+HTTPS uses SSL/TLS encryption to protect data transmitted between the client and the server.
+
+It ensures:
+
+- Data Confidentiality
+- Data Integrity
+- Authentication
+
+---
+
+# HTTP vs HTTPS
+
+| HTTP | HTTPS |
+|------|--------|
+| HyperText Transfer Protocol | HyperText Transfer Protocol Secure |
+| Not Encrypted | Encrypted using SSL/TLS |
+| Less Secure | More Secure |
+| Uses Port 80 | Uses Port 443 |
+
+---
+
+# Browser Communication Flow
+
+When we type:
+
+https://google.com
+
+The following happens:
+
+Browser
+
+↓
+
+DNS converts Domain Name to IP Address
+
+↓
+
+Browser connects to Google's Server
+
+↓
+
+HTTP/HTTPS Request
+
+↓
+
+Server Processes Request
+
+↓
+
+HTTP/HTTPS Response
+
+↓
+
+Browser Renders HTML, CSS, JavaScript
+
+↓
+
+Web Page is Displayed
+
+---
+
+# HTTP Request
+
+An HTTP Request is sent by the client to request resources from a server.
+
+Example:
+
+GET /students HTTP/1.1
+
+Host: localhost:8080
+
+The client is requesting student data.
+
+---
+
+# HTTP Response
+
+An HTTP Response is sent by the server.
+
+It contains:
+
+- Status Code
+- Headers
+- Response Body
+
+Example:
+
+HTTP/1.1 200 OK
+
+Content-Type: application/json
+
+---
+
+# HTTP Methods
+
+## GET
+
+Retrieves data from the server.
+
+Example:
+
+GET /students
+
+Returns all students.
+
+---
+
+## POST
+
+Creates a new resource.
+
+Example:
+
+POST /students
+
+Creates a new student.
+
+---
+
+## PUT
+
+Updates an entire existing resource.
+
+Example:
+
+PUT /students/5
+
+Updates all details of Student 5.
+
+---
+
+## PATCH
+
+Updates only specific fields of a resource.
+
+Example:
+
+PATCH /students/5
+
+Updates only the student's marks.
+
+---
+
+## DELETE
+
+Deletes a resource.
+
+Example:
+
+DELETE /students/5
+
+Deletes Student 5.
+
+---
+
+# CRUD Mapping
+
+| CRUD Operation | HTTP Method |
+|---------------|-------------|
+| Create | POST |
+| Read | GET |
+| Update | PUT / PATCH |
+| Delete | DELETE |
+
+---
+
+# HTTP Status Codes
+
+## 200 OK
+
+Request completed successfully.
+
+---
+
+## 201 Created
+
+A new resource was successfully created.
+
+Usually returned after a POST request.
+
+---
+
+## 204 No Content
+
+Request successful but no content is returned.
+
+Usually returned after DELETE.
+
+---
+
+## 400 Bad Request
+
+The client sent invalid data.
+
+Example:
+
+Missing required fields.
+
+---
+
+## 401 Unauthorized
+
+Authentication is required.
+
+Example:
+
+User is not logged in.
+
+---
+
+## 403 Forbidden
+
+Authentication succeeded, but the user does not have permission.
+
+Example:
+
+Student trying to access Admin APIs.
+
+---
+
+## 404 Not Found
+
+The requested resource does not exist.
+
+Example:
+
+Student ID not found.
+
+---
+
+## 500 Internal Server Error
+
+An unexpected error occurred on the server.
+
+Example:
+
+NullPointerException inside Spring Boot.
+
+---
+
+# URL Structure
+
+Example:
+
+http://localhost:8080/api/students
+
+Breakdown
+
+Protocol
+
+↓
+
+http
+
+Host
+
+↓
+
+localhost
+
+Port
+
+↓
+
+8080
+
+Endpoint
+
+↓
+
+/api/students
+
+---
+
+# HTTP Headers
+
+Headers provide additional information about the request or response.
+
+Common Headers:
+
+Content-Type: application/json
+
+Authorization: Bearer JWT_TOKEN
+
+Accept: application/json
+
+Host: localhost:8080
+
+Headers are heavily used in Spring Boot REST APIs.
+
+---
+
+# Stateless Protocol
+
+HTTP is Stateless.
+
+Meaning:
+
+Each request is independent.
+
+The server does not automatically remember previous requests.
+
+Example:
+
+GET /students
+
+↓
+
+Response
+
+↓
+
+Request Ends
+
+Later,
+
+GET /courses
+
+The server treats this as a completely new request.
+
+To remember users, applications use:
+
+- Sessions
+- Cookies
+- JWT Tokens
+
+---
+
+# Industry Connection
+
+Example Spring Boot API
+
+@GetMapping("/students")
+
+React Application
+
+↓
+
+fetch("http://localhost:8080/api/students")
+
+↓
+
+HTTP GET Request
+
+↓
+
+Spring Boot
+
+↓
+
+JSON Response
+
+↓
+
+React Displays Data
+
+Everything in modern web development is based on HTTP communication.
+
+---
+
+# Important Definitions
+
+## HTTP
+
+Application-layer protocol used for communication between client and server.
+
+---
+
+## HTTPS
+
+Secure version of HTTP that encrypts communication using SSL/TLS.
+
+---
+
+## HTTP Request
+
+Message sent by the client requesting data or services.
+
+---
+
+## HTTP Response
+
+Message returned by the server containing data and status information.
+
+---
+
+## Header
+
+Metadata sent with an HTTP request or response.
+
+---
+
+## Stateless Protocol
+
+A protocol in which each request is treated independently.
+
+---
+
+# Common Interview Questions
+
+1. What is HTTP?
+2. Difference between HTTP and HTTPS.
+3. What is an HTTP Request?
+4. What is an HTTP Response?
+5. Explain GET, POST, PUT, PATCH and DELETE.
+6. What is CRUD?
+7. Difference between PUT and PATCH.
+8. What is a Stateless Protocol?
+9. Difference between 401 and 403.
+10. Explain HTTP Status Codes.
+11. What are HTTP Headers?
+12. Explain the URL structure.
+
+---
+
+# Common Interview Mistakes
+
+❌ HTTP remembers previous requests.
+
+✅ HTTP is Stateless.
+
+---
+
+❌ GET is used for Login.
+
+✅ POST is generally used because credentials are sent in the request body.
+
+---
+
+❌ PUT and PATCH are identical.
+
+✅ PUT replaces the entire resource.
+
+PATCH updates only selected fields.
+
+---
+
+❌ 401 and 403 are the same.
+
+✅ 401 → Authentication required.
+
+✅ 403 → Authenticated but not authorized.
+
+---
+
+# Commands / Tools You Should Know
+
+Although HTTP itself has no commands, developers commonly test APIs using these tools:
+
+## Using Browser
+
+GET Request
+
+Example:
+
+http://localhost:8080/api/students
+
+---
+
+## Using Postman
+
+GET
+
+POST
+
+PUT
+
+PATCH
+
+DELETE
+
+These methods are available as buttons in Postman.
+
+---
+
+## Using cURL
+
+GET Request
+
+```bash
+curl http://localhost:8080/api/students
+```
+
+POST Request
+
+```bash
+curl -X POST http://localhost:8080/api/students
+```
+
+(We will learn cURL and Postman in detail later.)
+
+---
+
+# Revision Box
+
+✅ HTTP → Communication Protocol
+
+✅ HTTPS → Secure HTTP
+
+✅ GET → Read Data
+
+✅ POST → Create Data
+
+✅ PUT → Full Update
+
+✅ PATCH → Partial Update
+
+✅ DELETE → Delete Data
+
+✅ 200 → OK
+
+✅ 201 → Created
+
+✅ 204 → No Content
+
+✅ 400 → Bad Request
+
+✅ 401 → Authentication Required
+
+✅ 403 → Forbidden
+
+✅ 404 → Not Found
+
+✅ 500 → Internal Server Error
+
+✅ HTTP is Stateless
+
+---
+
+# Summary
+
+Today I learned HTTP and HTTPS, how clients and servers communicate, HTTP requests and responses, HTTP methods, CRUD mapping, HTTP status codes, URL structure, headers, and why HTTP is a stateless protocol. I also understood how browsers communicate with servers and why HTTP is the foundation of modern web applications and REST APIs.
