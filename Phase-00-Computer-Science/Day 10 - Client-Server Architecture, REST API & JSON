@@ -1,0 +1,540 @@
+# Day 10 - Client-Server Architecture, REST API & JSON
+
+## Module
+
+Phase 0 - Computer Science Foundations
+
+---
+
+# Prerequisites
+
+- Computer Networks
+- HTTP & HTTPS
+
+- Request and Response
+- HTTP Methods
+- HTTP Status Codes
+
+---
+
+# Learning Objectives
+
+- Client
+- Server
+- Client-Server Architecture
+- API
+- REST API
+- REST Principles
+- Endpoint
+- JSON
+- CRUD Mapping
+- Postman
+
+---
+
+# What is a Client?
+
+A Client is any application or device that requests a service from a server.
+
+Examples
+
+- Google Chrome
+- React Application
+- Mobile App
+- Desktop Application
+
+The client always initiates communication.
+
+---
+
+# What is a Server?
+
+A Server is a system that receives requests from clients, processes them, performs business logic (and accesses the database if required), and sends responses back to the client.
+
+Examples
+
+- Spring Boot Application
+- Node.js Server
+- Apache Tomcat
+- Database Server
+
+---
+
+# Client-Server Architecture
+
+Client
+
+↓
+
+HTTP Request
+
+↓
+
+Server
+
+↓
+
+Business Logic
+
+↓
+
+Database (if required)
+
+↓
+
+Server
+
+↓
+
+HTTP Response
+
+↓
+
+Client
+
+This architecture is used in almost every modern web application.
+
+---
+
+# What is an API?
+
+API stands for **Application Programming Interface**.
+
+An API is an interface that allows two software applications to communicate with each other.
+
+Example
+
+React
+
+↓
+
+REST API
+
+↓
+
+Spring Boot
+
+↓
+
+Database
+
+---
+
+# Real-Life Analogy
+
+Customer
+
+↓
+
+Waiter (API)
+
+↓
+
+Chef
+
+↓
+
+Food
+
+↓
+
+Waiter
+
+↓
+
+Customer
+
+The waiter acts as the communication layer between the customer and the chef, just like an API between two applications.
+
+---
+
+# What is REST API?
+
+REST stands for **Representational State Transfer**.
+
+A REST API is an API that follows REST architectural principles and communicates using HTTP.
+
+Examples
+
+GET /students
+
+POST /students
+
+PUT /students/5
+
+PATCH /students/5
+
+DELETE /students/5
+
+---
+
+# REST Principles (Important for Freshers)
+
+## 1. Client-Server
+
+Client and Server are independent.
+
+---
+
+## 2. Stateless
+
+The server does not remember previous requests.
+
+Every request is treated as a new request.
+
+---
+
+## 3. Uniform Interface
+
+API endpoints should follow a consistent naming convention.
+
+Correct
+
+/students
+
+/courses
+
+/teachers
+
+Wrong
+
+/getStudents
+
+/createStudent
+
+---
+
+## 4. Resource-Based URLs
+
+REST APIs use nouns instead of verbs.
+
+Correct
+
+/students
+
+Wrong
+
+/getStudents
+
+---
+
+# What is an Endpoint?
+
+An Endpoint is the URL through which an API can be accessed.
+
+Example
+
+http://localhost:8080/api/students
+
+Breakdown
+
+Protocol
+
+↓
+
+http
+
+Host
+
+↓
+
+localhost
+
+Port
+
+↓
+
+8080
+
+Endpoint
+
+↓
+
+/api/students
+
+---
+
+# What is JSON?
+
+JSON stands for **JavaScript Object Notation**.
+
+JSON is the most commonly used data format for exchanging information between the client and the server.
+
+Example
+
+```json
+{
+  "id": 1,
+  "name": "Krishna",
+  "course": "MCA"
+}
+```
+
+Example of JSON Array
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Krishna"
+  },
+  {
+    "id": 2,
+    "name": "Arjun"
+  }
+]
+```
+
+---
+
+# Advantages of JSON
+
+- Lightweight
+- Easy to Read
+- Easy to Write
+- Easy to Parse
+- Language Independent
+- Supported by almost every programming language
+
+---
+
+# CRUD Mapping
+
+| CRUD Operation | HTTP Method |
+|---------------|-------------|
+| Create | POST |
+| Read | GET |
+| Update | PUT / PATCH |
+| Delete | DELETE |
+
+---
+
+# API vs Endpoint
+
+| API | Endpoint |
+|-----|----------|
+| Complete communication interface | Specific URL inside an API |
+| Contains multiple endpoints | Represents a single resource |
+
+Example
+
+Student API
+
+Endpoints
+
+GET /students
+
+POST /students
+
+PUT /students/1
+
+DELETE /students/1
+
+---
+
+# What is Postman?
+
+Postman is an API testing tool.
+
+It allows developers to test REST APIs without creating a frontend.
+
+Common operations performed in Postman
+
+- GET
+- POST
+- PUT
+- PATCH
+- DELETE
+
+---
+
+# Industry Connection
+
+React
+
+↓
+
+HTTP Request
+
+↓
+
+Spring Boot REST API
+
+↓
+
+Service Layer
+
+↓
+
+Repository Layer
+
+↓
+
+MySQL Database
+
+↓
+
+JSON Response
+
+↓
+
+React Displays Data
+
+This is the architecture we will build throughout our bootcamp.
+
+---
+
+# Important Definitions
+
+## Client
+
+Requests services from a server.
+
+---
+
+## Server
+
+Processes requests and sends responses.
+
+---
+
+## API
+
+Allows communication between two software applications.
+
+---
+
+## REST API
+
+An HTTP-based API that follows REST principles.
+
+---
+
+## Endpoint
+
+A URL through which a specific API resource is accessed.
+
+---
+
+## JSON
+
+A lightweight data-interchange format.
+
+---
+
+## Postman
+
+A tool used to test APIs.
+
+---
+
+# Common Interview Questions
+
+1. What is Client-Server Architecture?
+2. What is an API?
+3. Difference between API and Endpoint.
+4. What is REST API?
+5. Explain REST Principles.
+6. What is JSON?
+7. Why is JSON preferred?
+8. Explain CRUD mapping with HTTP methods.
+9. What is Postman?
+10. Why do developers use Postman?
+
+---
+
+# Common Interview Mistakes
+
+❌ API and Endpoint are the same.
+
+✅ An API contains one or more endpoints.
+
+---
+
+❌ JSON is a programming language.
+
+✅ JSON is a data-interchange format.
+
+---
+
+❌ REST only supports JSON.
+
+✅ REST can use JSON, XML, or other data formats.
+
+---
+
+❌ GET is used to create data.
+
+✅ POST is used to create resources.
+
+---
+
+# Tools & Commands
+
+## Open a Spring Boot API in Browser (GET only)
+
+```
+http://localhost:8080/api/students
+```
+
+---
+
+## Example cURL Commands
+
+GET
+
+```bash
+curl http://localhost:8080/api/students
+```
+
+POST
+
+```bash
+curl -X POST http://localhost:8080/api/students
+```
+
+PUT
+
+```bash
+curl -X PUT http://localhost:8080/api/students/1
+```
+
+DELETE
+
+```bash
+curl -X DELETE http://localhost:8080/api/students/1
+```
+
+---
+
+# Revision Box
+
+✅ Client → Requests Services
+
+✅ Server → Processes Requests
+
+✅ API → Communication Layer
+
+✅ REST API → HTTP-Based API
+
+✅ Endpoint → URL of a Resource
+
+✅ JSON → Data Exchange Format
+
+✅ POST → Create
+
+✅ GET → Read
+
+✅ PUT → Full Update
+
+✅ PATCH → Partial Update
+
+✅ DELETE → Delete
+
+✅ Postman → API Testing Tool
+
+---
+
+# Summary
+
+Today I learned Client-Server Architecture, APIs, REST APIs, REST principles, Endpoints, JSON, CRUD mapping using HTTP methods, and Postman. I also understood how modern web applications communicate using HTTP requests and responses. These concepts form the foundation of Spring Boot REST API development.
