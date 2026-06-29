@@ -1,0 +1,499 @@
+# Day 12 - First Java Program & Java Program Structure
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Java Introduction
+- JDK
+- JRE
+- JVM
+- Java Compilation Process
+
+---
+
+# Learning Objectives
+
+- First Java Program
+- Java Program Structure
+- main() Method
+- System.out.println()
+- print() vs println()
+- Java Compilation Process
+- Time Complexity (Introduction)
+
+---
+
+# First Java Program
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello, World!");
+
+    }
+
+}
+```
+
+---
+
+# Java Program Structure
+
+A Java program consists of:
+
+- Class
+- Main Method
+- Statements
+- Curly Braces
+- Semicolons
+
+General Structure
+
+```java
+public class ClassName {
+
+    public static void main(String[] args) {
+
+        // Statements
+
+    }
+
+}
+```
+
+---
+
+# Understanding Each Keyword
+
+## public
+
+An access modifier.
+
+It allows the class or method to be accessed from anywhere.
+
+---
+
+## class
+
+Used to define a class.
+
+Every Java program belongs to a class.
+
+---
+
+## Main
+
+Name of the class.
+
+### Naming Rule
+
+If the class is declared as public,
+
+the file name must exactly match the class name.
+
+Example
+
+File Name
+
+```
+Main.java
+```
+
+Class
+
+```java
+public class Main
+```
+
+---
+
+## public static void main(String[] args)
+
+This is called the **main method**.
+
+The JVM starts program execution from this method.
+
+---
+
+### public
+
+Allows the JVM to access the method.
+
+---
+
+### static
+
+Allows the JVM to call the method without creating an object.
+
+---
+
+### void
+
+Indicates that the method does not return any value.
+
+---
+
+### main
+
+Special method recognized by the JVM.
+
+It is the entry point of every Java application.
+
+---
+
+### String[] args
+
+Stores command-line arguments passed to the program.
+
+We will study this in detail later.
+
+---
+
+# System.out.println()
+
+Used to print output on the console.
+
+Example
+
+```java
+System.out.println("Hello Java");
+```
+
+Output
+
+```
+Hello Java
+```
+
+---
+
+# print() vs println()
+
+## print()
+
+Prints output on the same line.
+
+Example
+
+```java
+System.out.print("Java ");
+System.out.print("Spring");
+```
+
+Output
+
+```
+Java Spring
+```
+
+---
+
+## println()
+
+Prints output and moves the cursor to the next line.
+
+Example
+
+```java
+System.out.println("Java");
+System.out.println("Spring");
+```
+
+Output
+
+```
+Java
+Spring
+```
+
+---
+
+# Curly Braces
+
+Curly braces `{}` define a block of code.
+
+Example
+
+```java
+class Demo {
+
+}
+```
+
+Everything inside belongs to the class.
+
+---
+
+# Semicolon (;)
+
+Every Java statement ends with a semicolon.
+
+Correct
+
+```java
+System.out.println("Hello");
+```
+
+Wrong
+
+```java
+System.out.println("Hello")
+```
+
+---
+
+# Java Compilation Process
+
+Source Code
+
+```
+Main.java
+```
+
+↓
+
+Java Compiler
+
+```
+javac Main.java
+```
+
+↓
+
+Bytecode
+
+```
+Main.class
+```
+
+↓
+
+JVM
+
+↓
+
+Machine Code
+
+↓
+
+CPU
+
+↓
+
+Output
+
+---
+
+# Program Execution Flow
+
+JVM Starts
+
+↓
+
+Finds `main()` Method
+
+↓
+
+Executes Statements
+
+↓
+
+Displays Output
+
+↓
+
+Program Ends
+
+---
+
+# Memory View (Current Stage)
+
+During execution,
+
+the `main()` method is placed on the call stack.
+
+No objects are created yet,
+
+so heap memory is not used.
+
+---
+
+# What is Time Complexity?
+
+Time Complexity measures how the running time of an algorithm grows as the input size increases.
+
+It measures the growth rate of an algorithm,
+
+not the actual execution time in seconds.
+
+Example
+
+Input = 10
+
+↓
+
+10 Operations
+
+Input = 100
+
+↓
+
+100 Operations
+
+Growth
+
+```
+O(n)
+```
+
+We will study Big O Notation in detail later.
+
+---
+
+# Important Definitions
+
+## Class
+
+A blueprint used to create objects.
+
+---
+
+## main() Method
+
+The entry point of every Java application.
+
+---
+
+## JVM
+
+Starts execution from the `main()` method.
+
+---
+
+## print()
+
+Prints output without moving to the next line.
+
+---
+
+## println()
+
+Prints output and moves the cursor to the next line.
+
+---
+
+## Time Complexity
+
+Measures how the running time of an algorithm grows as the input size increases.
+
+---
+
+# Common Interview Questions
+
+1. Why does every Java program start with a class?
+2. What is the purpose of the `main()` method?
+3. Why is `main()` declared as `static`?
+4. What is the difference between `print()` and `println()`?
+5. Explain the Java compilation process.
+6. Can we rename `args`?
+7. Can we change `String[]` to `int[]`?
+8. Can a Java class exist without a `main()` method?
+9. What is Time Complexity?
+10. What is the difference between actual execution time and Time Complexity?
+
+---
+
+# Common Interview Mistakes
+
+❌ File name and class name are different.
+
+✅ The file name must match the public class name.
+
+---
+
+❌ `main()` can be renamed.
+
+✅ The JVM specifically looks for the `main()` method.
+
+---
+
+❌ `main()` must always use `args`.
+
+✅ The parameter name can be changed, but the type must remain `String[]`.
+
+Example
+
+```java
+public static void main(String[] names)
+```
+
+---
+
+❌ Time Complexity measures execution time in seconds.
+
+✅ Time Complexity measures the growth rate of an algorithm.
+
+---
+
+# Commands You Should Know
+
+## Compile a Java Program
+
+```bash
+javac Main.java
+```
+
+---
+
+## Run a Java Program
+
+```bash
+java Main
+```
+
+---
+
+## Check Java Version
+
+```bash
+java -version
+```
+
+---
+
+## Check Java Compiler Version
+
+```bash
+javac -version
+```
+
+---
+
+# Revision Box
+
+✅ Every Java program belongs to a class.
+
+✅ JVM starts execution from `main()`.
+
+✅ `static` allows the JVM to call `main()` without creating an object.
+
+✅ `print()` → Same Line.
+
+✅ `println()` → Next Line.
+
+✅ `.java` → `javac` → `.class` → JVM → Machine Code.
+
+✅ Time Complexity measures algorithm growth, not execution time.
+
+---
+
+# Summary
+
+Today I wrote my first Java program and learned the structure of a Java application. I understood the purpose of the `main()` method, the role of `public`, `static`, and `void`, the difference between `print()` and `println()`, how Java programs are compiled and executed, and the basic idea of Time Complexity as a measure of algorithm growth.
