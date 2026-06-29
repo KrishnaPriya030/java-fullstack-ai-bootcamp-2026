@@ -1,0 +1,643 @@
+# Day 13 - Variables, Data Types & Identifiers
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Java Basics
+- First Java Program
+- main() Method
+- Java Compilation Process
+
+---
+
+# Learning Objectives
+
+- Variables
+- Data Types
+- Primitive Data Types
+- Non-Primitive Data Types
+- Identifiers
+- Naming Rules
+- Literals
+- Declaration
+- Initialization
+- Memory Representation
+- Introduction to Type Casting
+- Space Complexity
+
+---
+
+# What is a Variable?
+
+A variable is a named memory location used to store data.
+
+Variables allow us to store, modify, and reuse values during program execution.
+
+Example
+
+```java
+int age = 22;
+```
+
+Here,
+
+- Variable Name → age
+- Value → 22
+
+---
+
+# Why Do We Need Variables?
+
+Without Variables
+
+```java
+System.out.println(22);
+```
+
+With Variables
+
+```java
+int age = 22;
+System.out.println(age);
+```
+
+If the value changes,
+
+```java
+age = 23;
+```
+
+only one place needs to be updated.
+
+---
+
+# Variable Declaration
+
+Declaration means creating a variable by specifying its data type and name.
+
+Syntax
+
+```java
+dataType variableName;
+```
+
+Example
+
+```java
+int age;
+```
+
+---
+
+# Variable Initialization
+
+Initialization means assigning the first value to a variable.
+
+Example
+
+```java
+age = 22;
+```
+
+---
+
+# Declaration + Initialization
+
+Both can be done together.
+
+Example
+
+```java
+int age = 22;
+```
+
+---
+
+# What is a Data Type?
+
+A Data Type specifies:
+
+- What type of value can be stored.
+- How much memory is allocated.
+- What operations can be performed.
+
+---
+
+# Types of Data Types
+
+```
+Data Types
+
+│
+
+├── Primitive
+
+└── Non-Primitive
+```
+
+---
+
+# Primitive Data Types
+
+Primitive data types store actual values.
+
+Java has 8 primitive data types.
+
+| Data Type | Size | Example |
+|------------|------|----------|
+| byte | 1 Byte | 100 |
+| short | 2 Bytes | 20000 |
+| int | 4 Bytes | 100000 |
+| long | 8 Bytes | 9999999999L |
+| float | 4 Bytes | 3.14f |
+| double | 8 Bytes | 3.141592 |
+| char | 2 Bytes | 'A' |
+| boolean | JVM-dependent representation | true |
+
+---
+
+# Primitive Example
+
+```java
+byte age = 20;
+
+short salary = 30000;
+
+int marks = 95;
+
+long population = 8000000000L;
+
+float pi = 3.14f;
+
+double value = 3.1415926535;
+
+char grade = 'A';
+
+boolean passed = true;
+```
+
+---
+
+# Non-Primitive Data Types
+
+Non-Primitive data types store references to objects.
+
+Examples
+
+- String
+- Array
+- Class
+- Object
+- Interface
+
+Example
+
+```java
+String name = "Krishna";
+```
+
+---
+
+# Primitive vs Non-Primitive
+
+| Primitive | Non-Primitive |
+|------------|---------------|
+| Stores actual value | Stores reference to an object |
+| Mostly fixed size | Size depends on the object |
+| Built into Java | Created using classes |
+
+---
+
+# Identifiers
+
+Identifiers are names given to:
+
+- Variables
+- Methods
+- Classes
+- Objects
+- Interfaces
+- Packages
+
+Example
+
+```java
+int age = 22;
+```
+
+`age` is an identifier.
+
+---
+
+# Rules for Identifiers
+
+## Allowed
+
+- Letters
+- Digits
+- Underscore (_)
+- Dollar Sign ($)
+
+---
+
+## Cannot Start with a Number
+
+Wrong
+
+```java
+int 1age;
+```
+
+Correct
+
+```java
+int age1;
+```
+
+---
+
+## Cannot Use Java Keywords
+
+Wrong
+
+```java
+int class = 10;
+```
+
+Correct
+
+```java
+int studentClass = 10;
+```
+
+---
+
+## Case Sensitive
+
+```java
+age
+
+Age
+
+AGE
+```
+
+All three are different identifiers.
+
+---
+
+# Java Naming Conventions
+
+## Variables
+
+Use camelCase.
+
+Example
+
+```java
+studentName
+```
+
+---
+
+## Classes
+
+Use PascalCase.
+
+Example
+
+```java
+StudentDetails
+```
+
+---
+
+## Constants
+
+Use UPPER_CASE.
+
+Example
+
+```java
+MAX_SIZE
+```
+
+---
+
+# Literals
+
+A literal is the actual value assigned to a variable.
+
+Example
+
+```java
+int age = 22;
+```
+
+22 is a literal.
+
+Examples
+
+```java
+100
+
+3.14
+
+'A'
+
+true
+
+"Hello"
+```
+
+---
+
+# Memory Representation
+
+```java
+int age = 22;
+
+char grade = 'A';
+```
+
+Stack Memory
+
+```
+age
+
+↓
+
+22
+
+grade
+
+↓
+
+A
+```
+
+Primitive variables store their values directly.
+
+Objects will be stored differently (Heap Memory), which we'll learn later.
+
+---
+
+# Introduction to Type Casting
+
+Type Casting means converting one data type into another.
+
+Example
+
+```java
+double d = 25;
+
+int x = (int)d;
+```
+
+Output
+
+```
+25
+```
+
+We will study this topic in detail later.
+
+---
+
+# DSA Foundation
+
+## What is Space Complexity?
+
+Space Complexity measures the amount of additional memory an algorithm requires as the input size grows.
+
+Examples
+
+One Variable
+
+```
+O(1)
+```
+
+Additional Array of Size n
+
+```
+O(n)
+```
+
+---
+
+# Industry Connection
+
+When a user registers in our Hospital Management System:
+
+```java
+String patientName = "Rahul";
+
+int age = 25;
+
+boolean admitted = true;
+```
+
+Every piece of information is stored using variables and appropriate data types.
+
+---
+
+# Important Definitions
+
+## Variable
+
+A named memory location used to store data.
+
+---
+
+## Data Type
+
+Specifies the type of data that can be stored and how much memory is allocated.
+
+---
+
+## Primitive Data Type
+
+Stores actual values directly.
+
+---
+
+## Non-Primitive Data Type
+
+Stores references to objects.
+
+---
+
+## Identifier
+
+A name given to program elements such as variables, methods, classes, and objects.
+
+---
+
+## Literal
+
+The actual value assigned to a variable.
+
+---
+
+## Space Complexity
+
+Measures the additional memory required by an algorithm as the input size increases.
+
+---
+
+# Common Interview Questions
+
+1. What is a variable?
+2. What is a data type?
+3. List all primitive data types.
+4. Difference between primitive and non-primitive data types.
+5. What is an identifier?
+6. What are the rules for identifiers?
+7. Difference between declaration and initialization.
+8. What is a literal?
+9. What is Space Complexity?
+10. Why is `String` not a primitive data type?
+
+---
+
+# Common Interview Mistakes
+
+❌
+
+```java
+int class = 10;
+```
+
+Wrong.
+
+---
+
+✅
+
+```java
+int studentClass = 10;
+```
+
+Correct.
+
+---
+
+❌
+
+```java
+float value = 3.14;
+```
+
+Wrong.
+
+---
+
+✅
+
+```java
+float value = 3.14f;
+```
+
+Correct.
+
+---
+
+❌
+
+```java
+char grade = "A";
+```
+
+Wrong.
+
+---
+
+✅
+
+```java
+char grade = 'A';
+```
+
+Correct.
+
+---
+
+❌
+
+```java
+String name = 'Krishna';
+```
+
+Wrong.
+
+---
+
+✅
+
+```java
+String name = "Krishna";
+```
+
+Correct.
+
+---
+
+# Commands You Should Know
+
+Compile Java Program
+
+```bash
+javac Main.java
+```
+
+Run Java Program
+
+```bash
+java Main
+```
+
+Check Java Version
+
+```bash
+java -version
+```
+
+Check Compiler Version
+
+```bash
+javac -version
+```
+
+---
+
+# Revision Box
+
+✅ Variable → Named Memory Location
+
+✅ Data Type → Defines the type of data
+
+✅ Primitive → Stores Actual Value
+
+✅ Non-Primitive → Stores Reference
+
+✅ Identifier → Name of Program Elements
+
+✅ Literal → Actual Value
+
+✅ Declaration → Create Variable
+
+✅ Initialization → Assign First Value
+
+✅ Space Complexity → Additional Memory Used by an Algorithm
+
+---
+
+# Summary
+
+Today I learned about variables, data types, identifiers, literals, declaration, initialization, primitive and non-primitive data types, naming rules, memory representation, and the basic concept of type casting. I also learned that Space Complexity measures the additional memory required by an algorithm as the input size increases.
