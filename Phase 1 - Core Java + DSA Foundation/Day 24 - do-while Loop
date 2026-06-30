@@ -1,0 +1,222 @@
+# Day 24 - do-while Loop
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Learning Objectives
+
+- What is a do-while loop?
+- Syntax
+- Flow of execution
+- Exit-controlled loop
+- while vs do-while
+- Menu-driven programs
+- Infinite do-while loop
+- Time Complexity
+
+---
+
+# What is a do-while Loop?
+
+A **do-while loop** is a control statement that executes a block of code at least once because the condition is checked after the loop body executes.
+
+---
+
+# Why Use a do-while Loop?
+
+Use a do-while loop when the code must execute **at least once**, regardless of whether the condition is initially true or false.
+
+Common uses:
+
+- ATM menus
+- Calculator menus
+- Game menus
+- Input validation
+- Retry operations
+
+---
+
+# Syntax
+
+```java
+do{
+
+    // statements
+
+}while(condition);
+```
+
+> **Note:** A semicolon (`;`) is required after the `while(condition)`.
+
+---
+
+# Flow of Execution
+
+```
+Execute Loop Body
+
+↓
+
+Check Condition
+
+↓
+
+True?
+
+↓
+
+Repeat
+
+↓
+
+False?
+
+↓
+
+Exit Loop
+```
+
+---
+
+# Example
+
+```java
+int i = 1;
+
+do{
+    System.out.println(i);
+    i++;
+}while(i <= 5);
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+# while vs do-while
+
+| while | do-while |
+|--------|-----------|
+| Entry-controlled | Exit-controlled |
+| Condition checked first | Condition checked after the loop body |
+| May execute zero times | Executes at least once |
+
+---
+
+# Infinite do-while Loop
+
+```java
+do{
+    System.out.println("Hello");
+}while(true);
+```
+
+This loop never terminates unless interrupted.
+
+---
+
+# Time Complexity
+
+```java
+do{
+    i++;
+}while(i <= n);
+```
+
+Time Complexity
+
+```
+O(n)
+```
+
+---
+
+```java
+do{
+    i++;
+}while(i <= 100);
+```
+
+Time Complexity
+
+```
+O(1)
+```
+
+---
+
+# DSA Connection
+
+The do-while loop is useful for:
+
+- Menu-driven programs
+- Repeating user input until valid
+- Console applications
+- Retry mechanisms
+
+---
+
+# Industry Connection
+
+Used in:
+
+- ATM software
+- Banking systems
+- Console utilities
+- Interactive applications
+
+---
+
+# Common Interview Questions
+
+1. What is a do-while loop?
+2. Why is it called an exit-controlled loop?
+3. Difference between while and do-while.
+4. When should you use a do-while loop?
+5. What is an infinite do-while loop?
+6. What is its time complexity?
+
+---
+
+# Common Interview Mistakes
+
+❌ Forgetting the semicolon after `while(condition);`
+
+❌ Assuming the loop won't execute if the condition is false initially.
+
+Remember: **A do-while loop always executes at least once.**
+
+---
+
+# Revision Box
+
+✅ Executes at least once.
+
+✅ Exit-controlled loop.
+
+✅ Condition checked after execution.
+
+✅ Useful for menu-driven programs.
+
+✅ Infinite loop → `while(true)`.
+
+✅ O(n) → Depends on input size.
+
+✅ O(1) → Fixed number of iterations.
+
+---
+
+# Summary
+
+Today I learned the `do-while` loop, which executes its body at least once because the condition is checked after the loop body. I understood why it is called an exit-controlled loop, how it differs from the `while` loop, where it is commonly used, and how to analyze its time complexity.
