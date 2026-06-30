@@ -1,0 +1,477 @@
+# Day 19 - Scanner Class (Part 2)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+
+---
+
+# Prerequisites
+
+- Scanner Class
+- User Input
+- Objects
+- Stack & Heap Memory
+
+---
+
+# Learning Objectives
+
+- next() vs nextLine()
+- Input Buffer
+- nextInt() and nextLine() Issue
+- Reading Character Input
+- Multiple User Inputs
+- Common Scanner Mistakes
+
+---
+
+# Revision
+
+Previously, we learned:
+
+- Scanner Class
+- Creating Scanner Objects
+- Reading int, double, float, long, boolean and String
+- Scanner Methods
+- Heap and Stack Memory
+
+Today we will learn how Scanner reads text and the common problems developers face.
+
+---
+
+# Difference Between next() and nextLine()
+
+| next() | nextLine() |
+|---------|------------|
+| Reads one word | Reads the entire line |
+| Stops at whitespace (space, tab, newline) | Reads until Enter is pressed |
+| Cannot read a full sentence | Can read a full sentence |
+
+---
+
+# Example using next()
+
+```java
+Scanner sc = new Scanner(System.in);
+
+String name = sc.next();
+
+System.out.println(name);
+```
+
+Input
+
+```
+Krishna Priya
+```
+
+Output
+
+```
+Krishna
+```
+
+Reason
+
+`next()` stops reading when it encounters whitespace.
+
+---
+
+# Example using nextLine()
+
+```java
+Scanner sc = new Scanner(System.in);
+
+String name = sc.nextLine();
+
+System.out.println(name);
+```
+
+Input
+
+```
+Krishna Priya
+```
+
+Output
+
+```
+Krishna Priya
+```
+
+Reason
+
+`nextLine()` reads the entire line until the Enter key is pressed.
+
+---
+
+# The nextInt() and nextLine() Problem
+
+Example
+
+```java
+Scanner sc = new Scanner(System.in);
+
+int age = sc.nextInt();
+
+String name = sc.nextLine();
+
+System.out.println(age);
+System.out.println(name);
+```
+
+Input
+
+```
+22
+Krishna
+```
+
+Output
+
+```
+22
+```
+
+The name is skipped.
+
+---
+
+# Why Does This Happen?
+
+When the user enters:
+
+```
+22↵
+```
+
+The input buffer contains:
+
+```
+22\n
+```
+
+`nextInt()` reads only:
+
+```
+22
+```
+
+The newline character (`\n`) remains in the input buffer.
+
+When `nextLine()` executes, it immediately reads the leftover newline and returns an empty string.
+
+---
+
+# Input Buffer
+
+The input buffer is a temporary memory area where keyboard input is stored before the program reads it.
+
+Example
+
+```
+Keyboard
+
+↓
+
+Input Buffer
+
+↓
+
+Scanner
+
+↓
+
+Java Program
+```
+
+---
+
+# Solution
+
+Consume the leftover newline before calling `nextLine()`.
+
+```java
+int age = sc.nextInt();
+
+sc.nextLine();
+
+String name = sc.nextLine();
+```
+
+Now the program works correctly.
+
+---
+
+# Reading a Character
+
+Scanner does not provide a `nextChar()` method.
+
+To read a character:
+
+```java
+char grade = sc.next().charAt(0);
+```
+
+Explanation
+
+`next()` reads one word.
+
+`charAt(0)` returns the first character.
+
+Example
+
+Input
+
+```
+Apple
+```
+
+Output
+
+```
+A
+```
+
+---
+
+# Reading Multiple Inputs
+
+Example
+
+```java
+Scanner sc = new Scanner(System.in);
+
+System.out.print("Enter Name: ");
+String name = sc.nextLine();
+
+System.out.print("Enter Age: ");
+int age = sc.nextInt();
+
+System.out.print("Enter Salary: ");
+double salary = sc.nextDouble();
+
+System.out.println(name);
+System.out.println(age);
+System.out.println(salary);
+
+sc.close();
+```
+
+---
+
+# Memory Flow
+
+```
+Keyboard
+
+↓
+
+Input Buffer
+
+↓
+
+Scanner Object
+
+↓
+
+Variables
+```
+
+---
+
+# DSA Connection
+
+Every DSA problem follows this sequence:
+
+```
+Read Input
+
+↓
+
+Process Data
+
+↓
+
+Display Output
+```
+
+Correctly reading input is essential before solving arrays, strings, matrices, or graph problems.
+
+---
+
+# Industry Connection
+
+Scanner is mainly used for:
+
+- Learning Java
+- Console Applications
+- Coding Practice
+- Competitive Programming
+
+In enterprise applications, input is usually received through:
+
+- REST APIs
+- Web Forms
+- Mobile Applications
+- Desktop GUIs
+
+---
+
+# Important Definitions
+
+## next()
+
+Reads one word and stops at whitespace.
+
+---
+
+## nextLine()
+
+Reads the complete line until Enter is pressed.
+
+---
+
+## Input Buffer
+
+A temporary memory area that stores user input before Scanner reads it.
+
+---
+
+## charAt()
+
+Returns the character at a specified index in a String.
+
+Example
+
+```java
+"Apple".charAt(0)
+```
+
+Output
+
+```
+'A'
+```
+
+---
+
+# Common Interview Questions
+
+1. Difference between `next()` and `nextLine()`.
+2. Why does `nextLine()` get skipped after `nextInt()`?
+3. What is the input buffer?
+4. How do you fix the `nextLine()` problem?
+5. How do you read a character using Scanner?
+6. Does Scanner have a `nextChar()` method?
+7. Explain `charAt(0)`.
+
+---
+
+# Common Interview Mistakes
+
+❌
+
+```java
+int age = sc.nextInt();
+
+String name = sc.nextLine();
+```
+
+The name becomes an empty string.
+
+---
+
+✅
+
+```java
+int age = sc.nextInt();
+
+sc.nextLine();
+
+String name = sc.nextLine();
+```
+
+Correct.
+
+---
+
+❌
+
+```java
+char ch = sc.nextChar();
+```
+
+Compilation Error.
+
+---
+
+✅
+
+```java
+char ch = sc.next().charAt(0);
+```
+
+Correct.
+
+---
+
+❌ Expecting `next()` to read:
+
+```
+Java Full Stack
+```
+
+Output
+
+```
+Java
+```
+
+Only the first word is read.
+
+---
+
+# Commands You Should Know
+
+Compile
+
+```bash
+javac ScannerDemo.java
+```
+
+Run
+
+```bash
+java ScannerDemo
+```
+
+---
+
+# Revision Box
+
+✅ next() → Reads one word.
+
+✅ nextLine() → Reads the entire line.
+
+✅ nextInt() leaves `\n` in the input buffer.
+
+✅ nextLine() reads the leftover newline if not consumed.
+
+✅ Fix → Add an extra `sc.nextLine()` before reading the full line.
+
+✅ Scanner has no `nextChar()` method.
+
+✅ Read a character using:
+
+```java
+sc.next().charAt(0);
+```
+
+---
+
+# Summary
+
+Today I learned the difference between `next()` and `nextLine()`, why `nextLine()` sometimes gets skipped after `nextInt()`, the concept of the input buffer, and how to solve this issue by consuming the leftover newline. I also learned how to read a character using `sc.next().charAt(0)` because Scanner does not provide a `nextChar()` method. These concepts are important for writing interactive Java programs and are commonly asked in interviews.
