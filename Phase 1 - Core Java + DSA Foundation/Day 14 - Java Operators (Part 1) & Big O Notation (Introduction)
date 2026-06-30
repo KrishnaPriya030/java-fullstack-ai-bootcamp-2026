@@ -1,0 +1,540 @@
+# Day 14 - Java Operators (Part 1) & Big O Notation (Introduction)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Variables
+- Data Types
+- Java Program Structure
+
+---
+
+# Learning Objectives
+
+- Operators
+- Arithmetic Operators
+- Unary Operators
+- Division and Modulus
+- Pre and Post Increment
+- Big O Notation
+- O(1)
+- O(n)
+- O(n²)
+
+---
+
+# What is an Operator?
+
+An Operator is a symbol that performs an operation on one or more operands.
+
+Example
+
+```java
+int sum = 10 + 20;
+```
+
+Operator
+
+```
++
+```
+
+Operands
+
+```
+10
+
+20
+```
+
+---
+
+# Types of Operators
+
+Java provides the following operators:
+
+- Arithmetic Operators
+- Unary Operators
+- Assignment Operators
+- Relational Operators
+- Logical Operators
+- Ternary Operator
+- Bitwise Operators
+
+---
+
+# Arithmetic Operators
+
+Arithmetic operators perform mathematical calculations.
+
+| Operator | Meaning | Example |
+|-----------|----------|---------|
+| + | Addition | 10 + 5 |
+| - | Subtraction | 10 - 5 |
+| * | Multiplication | 10 * 5 |
+| / | Division | 10 / 5 |
+| % | Modulus (Remainder) | 10 % 3 |
+
+---
+
+# Example Program
+
+```java
+public class ArithmeticDemo {
+
+    public static void main(String[] args) {
+
+        int a = 20;
+        int b = 6;
+
+        System.out.println("Addition = " + (a + b));
+        System.out.println("Subtraction = " + (a - b));
+        System.out.println("Multiplication = " + (a * b));
+        System.out.println("Division = " + (a / b));
+        System.out.println("Remainder = " + (a % b));
+
+    }
+
+}
+```
+
+Output
+
+```
+Addition = 26
+
+Subtraction = 14
+
+Multiplication = 120
+
+Division = 3
+
+Remainder = 2
+```
+
+---
+
+# Integer Division
+
+When both operands are integers,
+
+Java performs integer division.
+
+Example
+
+```java
+20 / 6
+```
+
+Output
+
+```
+3
+```
+
+The decimal part is discarded.
+
+---
+
+# Floating-Point Division
+
+If either operand is a float or double,
+
+Java performs floating-point division.
+
+Example
+
+```java
+20.0 / 6
+```
+
+Output
+
+```
+3.333333...
+```
+
+---
+
+# Modulus Operator (%)
+
+The modulus operator returns the remainder after division.
+
+Example
+
+```java
+20 % 6
+```
+
+Output
+
+```
+2
+```
+
+Because
+
+```
+20 = (6 × 3) + 2
+```
+
+---
+
+# Unary Operators
+
+Unary operators work on a single operand.
+
+They include:
+
+- Increment (++)
+- Decrement (--)
+
+---
+
+# Increment Operator (++)
+
+Increases a value by 1.
+
+Example
+
+```java
+int x = 5;
+
+x++;
+```
+
+Result
+
+```
+6
+```
+
+---
+
+# Decrement Operator (--)
+
+Decreases a value by 1.
+
+Example
+
+```java
+int x = 5;
+
+x--;
+```
+
+Result
+
+```
+4
+```
+
+---
+
+# Pre-Increment
+
+Syntax
+
+```java
+++x
+```
+
+The value is increased first,
+
+then used.
+
+Example
+
+```java
+int x = 5;
+
+System.out.println(++x);
+```
+
+Output
+
+```
+6
+```
+
+---
+
+# Post-Increment
+
+Syntax
+
+```java
+x++
+```
+
+The current value is used first,
+
+then increased.
+
+Example
+
+```java
+int x = 5;
+
+System.out.println(x++);
+```
+
+Output
+
+```
+5
+```
+
+After execution,
+
+```
+x = 6
+```
+
+---
+
+# Difference Between Pre and Post Increment
+
+| Pre-Increment | Post-Increment |
+|---------------|----------------|
+| Value increases first | Current value is used first |
+| Then the value is used | Value increases afterwards |
+
+---
+
+# Memory Representation
+
+Program
+
+```java
+int x = 5;
+```
+
+Stack Memory
+
+```
+x
+
+↓
+
+5
+```
+
+After
+
+```java
+x++;
+```
+
+Stack Memory
+
+```
+x
+
+↓
+
+6
+```
+
+Primitive local variables store their values directly in stack memory.
+
+---
+
+# DSA Foundation
+
+## What is Big O Notation?
+
+Big O Notation describes how the running time of an algorithm grows as the input size increases.
+
+It does **not** measure the actual execution time in seconds.
+
+---
+
+# O(1) - Constant Time
+
+The running time remains constant regardless of input size.
+
+Example
+
+```java
+System.out.println(arr[5]);
+```
+
+Only one operation is performed.
+
+---
+
+# O(n) - Linear Time
+
+The running time grows linearly with the input size.
+
+Example
+
+```java
+for(int i = 0; i < n; i++) {
+
+}
+```
+
+If `n` doubles,
+
+the number of iterations approximately doubles.
+
+---
+
+# O(n²) - Quadratic Time
+
+The running time grows quadratically.
+
+Example
+
+```java
+for(int i = 0; i < n; i++) {
+
+    for(int j = 0; j < n; j++) {
+
+    }
+
+}
+```
+
+If `n` doubles,
+
+the number of operations becomes approximately four times larger.
+
+---
+
+# Industry Connection
+
+Arithmetic operators are used in:
+
+- Banking Applications
+- Billing Systems
+- Payroll Systems
+- E-Commerce Applications
+
+Increment and decrement operators are commonly used in:
+
+- Loops
+- Counters
+- Array Traversal
+
+Big O Notation helps developers choose efficient algorithms for handling large amounts of data.
+
+---
+
+# Important Definitions
+
+## Operator
+
+A symbol that performs an operation on one or more operands.
+
+---
+
+## Operand
+
+The values on which an operator performs an operation.
+
+---
+
+## Arithmetic Operator
+
+Used to perform mathematical calculations.
+
+---
+
+## Unary Operator
+
+Operates on a single operand.
+
+---
+
+## Big O Notation
+
+Describes how an algorithm's running time grows as the input size increases.
+
+---
+
+# Common Interview Questions
+
+1. What is an operator?
+2. What is an operand?
+3. Difference between `/` and `%`.
+4. Difference between `++x` and `x++`.
+5. Why does `20 / 6` produce `3`?
+6. What is Big O Notation?
+7. Difference between `O(1)` and `O(n)`.
+8. Give an example of `O(n²)`.
+
+---
+
+# Common Interview Mistakes
+
+❌ Thinking `%` returns the quotient.
+
+✅ `%` returns the remainder.
+
+---
+
+❌ Assuming `x++` increments before printing.
+
+✅ `x++` uses the current value first and increments afterwards.
+
+---
+
+❌ Believing Big O measures execution time in seconds.
+
+✅ Big O measures how the running time grows as input size increases.
+
+---
+
+# Commands You Should Know
+
+Compile
+
+```bash
+javac ArithmeticDemo.java
+```
+
+Run
+
+```bash
+java ArithmeticDemo
+```
+
+---
+
+# Revision Box
+
+✅ Operator → Performs an operation.
+
+✅ Operand → Value used by an operator.
+
+✅ `/` → Division.
+
+✅ `%` → Remainder.
+
+✅ `++x` → Increase first.
+
+✅ `x++` → Use first, then increase.
+
+✅ Integer Division → Decimal part discarded.
+
+✅ Big O → Growth of an algorithm.
+
+✅ O(1) → Constant Time.
+
+✅ O(n) → Linear Time.
+
+✅ O(n²) → Quadratic Time.
+
+---
+
+# Summary
+
+Today I learned about Java operators, including arithmetic and unary operators. I understood the difference between division and modulus, pre-increment and post-increment, integer and floating-point division, and the basic concept of Big O Notation. I also learned how to identify constant, linear, and quadratic time complexities.
