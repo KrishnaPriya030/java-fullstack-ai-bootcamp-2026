@@ -1,0 +1,516 @@
+# Day 15 - Java Operators (Part 2)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Variables
+- Data Types
+- Arithmetic Operators
+- Unary Operators
+
+---
+
+# Learning Objectives
+
+- Assignment Operators
+- Relational Operators
+- Logical Operators
+- Short-Circuit Evaluation
+- Ternary Operator
+- Bitwise Operators (Introduction)
+- Operator Precedence
+- Big O (O(log n))
+
+---
+
+# Assignment Operators
+
+Assignment operators assign values to variables.
+
+## Basic Assignment
+
+```java
+int x = 10;
+```
+
+`=` assigns the value `10` to the variable `x`.
+
+---
+
+## Compound Assignment Operators
+
+| Operator | Equivalent Expression |
+|-----------|-----------------------|
+| += | x = x + value |
+| -= | x = x - value |
+| *= | x = x * value |
+| /= | x = x / value |
+| %= | x = x % value |
+
+---
+
+## Example
+
+```java
+int x = 10;
+
+x += 5;
+
+System.out.println(x);
+```
+
+Output
+
+```
+15
+```
+
+---
+
+# Relational Operators
+
+Relational operators compare two values.
+
+The result is always a boolean (`true` or `false`).
+
+| Operator | Meaning |
+|-----------|----------|
+| == | Equal To |
+| != | Not Equal To |
+| > | Greater Than |
+| < | Less Than |
+| >= | Greater Than or Equal To |
+| <= | Less Than or Equal To |
+
+---
+
+## Example
+
+```java
+int a = 10;
+int b = 20;
+
+System.out.println(a < b);
+System.out.println(a == b);
+System.out.println(a != b);
+```
+
+Output
+
+```
+true
+false
+true
+```
+
+---
+
+# Difference Between = and ==
+
+## =
+
+Assignment Operator
+
+Assigns a value to a variable.
+
+Example
+
+```java
+int age = 22;
+```
+
+---
+
+## ==
+
+Comparison Operator
+
+Checks whether two values are equal.
+
+Example
+
+```java
+System.out.println(age == 22);
+```
+
+Output
+
+```
+true
+```
+
+---
+
+# Logical Operators
+
+Logical operators work with boolean values.
+
+| Operator | Meaning |
+|-----------|----------|
+| && | Logical AND |
+| || | Logical OR |
+| ! | Logical NOT |
+
+---
+
+# Logical AND (&&)
+
+Returns `true` only if **both** conditions are true.
+
+Example
+
+```java
+int age = 25;
+
+System.out.println(age > 18 && age < 60);
+```
+
+Output
+
+```
+true
+```
+
+---
+
+# Logical OR (||)
+
+Returns `true` if **at least one** condition is true.
+
+Example
+
+```java
+System.out.println(5 > 10 || 20 > 10);
+```
+
+Output
+
+```
+true
+```
+
+---
+
+# Logical NOT (!)
+
+Reverses a boolean value.
+
+Example
+
+```java
+boolean passed = true;
+
+System.out.println(!passed);
+```
+
+Output
+
+```
+false
+```
+
+---
+
+# Short-Circuit Evaluation
+
+## Logical AND (&&)
+
+If the first condition is **false**, Java does not evaluate the second condition.
+
+Example
+
+```java
+if(false && 10 / 0 > 1)
+```
+
+The second condition is skipped.
+
+No ArithmeticException occurs.
+
+---
+
+## Logical OR (||)
+
+If the first condition is **true**, Java does not evaluate the second condition.
+
+Example
+
+```java
+if(true || 10 / 0 > 1)
+```
+
+The second condition is skipped.
+
+---
+
+# Difference Between && and &
+
+## &&
+
+- Logical AND
+- Uses short-circuit evaluation
+- Stops evaluating if the first condition is false
+
+---
+
+## &
+
+- Evaluates both operands
+- Used as:
+  - Logical AND (for boolean expressions)
+  - Bitwise AND (for integer values)
+
+---
+
+# Difference Between || and |
+
+## ||
+
+- Logical OR
+- Uses short-circuit evaluation
+- Stops evaluating if the first condition is true
+
+---
+
+## |
+
+- Evaluates both operands
+- Used as:
+  - Logical OR (for boolean expressions)
+  - Bitwise OR (for integer values)
+
+---
+
+# Ternary Operator
+
+A shorthand form of `if-else`.
+
+Syntax
+
+```java
+condition ? valueIfTrue : valueIfFalse;
+```
+
+Example
+
+```java
+int age = 20;
+
+String result = age >= 18 ? "Eligible" : "Not Eligible";
+
+System.out.println(result);
+```
+
+Output
+
+```
+Eligible
+```
+
+---
+
+# Bitwise Operators (Introduction)
+
+Bitwise operators work on binary representations of integers.
+
+| Operator | Meaning |
+|-----------|----------|
+| & | Bitwise AND |
+| \| | Bitwise OR |
+| ^ | Bitwise XOR |
+| ~ | Bitwise NOT |
+| << | Left Shift |
+| >> | Right Shift |
+
+Example
+
+```java
+System.out.println(5 & 3);
+```
+
+Binary
+
+```
+5 = 0101
+3 = 0011
+```
+
+Result
+
+```
+0001
+```
+
+Output
+
+```
+1
+```
+
+---
+
+# Operator Precedence
+
+Operators are evaluated according to their precedence.
+
+Practical Order
+
+1. Parentheses `()`
+2. Unary Operators (`++`, `--`, `!`)
+3. Multiplication, Division, Modulus (`*`, `/`, `%`)
+4. Addition, Subtraction (`+`, `-`)
+5. Relational Operators (`<`, `>`, `<=`, `>=`)
+6. Equality Operators (`==`, `!=`)
+7. Logical AND (`&&`)
+8. Logical OR (`||`)
+9. Ternary (`?:`)
+10. Assignment (`=`, `+=`, `-=`, ...)
+
+---
+
+# DSA Foundation
+
+## O(log n)
+
+Logarithmic Time Complexity
+
+An algorithm with `O(log n)` reduces the problem size significantly after each step, often by half.
+
+Example
+
+Binary Search
+
+Every iteration discards half of the remaining search space.
+
+This makes Binary Search much faster than Linear Search for sorted data.
+
+---
+
+# Industry Connection
+
+Assignment operators are commonly used for updating counters and totals.
+
+Relational and logical operators are used in:
+
+- Login validation
+- Role-based access
+- Input validation
+- Filtering data
+- Business rules
+
+The ternary operator is useful for concise conditional expressions.
+
+---
+
+# Important Definitions
+
+## Assignment Operator
+
+Assigns a value to a variable.
+
+---
+
+## Relational Operator
+
+Compares two values and returns a boolean result.
+
+---
+
+## Logical Operator
+
+Combines or modifies boolean expressions.
+
+---
+
+## Short-Circuit Evaluation
+
+A behavior where Java skips evaluating the second condition when the final result is already determined.
+
+---
+
+## Ternary Operator
+
+A compact alternative to an `if-else` statement.
+
+---
+
+## O(log n)
+
+A time complexity where the problem size is reduced significantly (often by half) after each step.
+
+---
+
+# Common Interview Questions
+
+1. Difference between `=` and `==`.
+2. Difference between `&&` and `&`.
+3. Difference between `||` and `|`.
+4. What is short-circuit evaluation?
+5. What is the ternary operator?
+6. Explain operator precedence.
+7. Why is Binary Search `O(log n)`?
+
+---
+
+# Common Interview Mistakes
+
+❌ Using `=` instead of `==` for comparisons.
+
+---
+
+❌ Assuming `&` and `&&` behave the same.
+
+---
+
+❌ Forgetting that `||` short-circuits.
+
+---
+
+❌ Ignoring operator precedence in complex expressions.
+
+---
+
+# Commands You Should Know
+
+Compile
+
+```bash
+javac AssignmentDemo.java
+```
+
+Run
+
+```bash
+java AssignmentDemo
+```
+
+---
+
+# Revision Box
+
+✅ `=` → Assignment
+
+✅ `==` → Comparison
+
+✅ `&&` → Logical AND (Short-Circuit)
+
+✅ `&` → Evaluates both operands / Bitwise AND
+
+✅ `||` → Logical OR (Short-Circuit)
+
+✅ `|` → Evaluates both operands / Bitwise OR
+
+✅ `?:` → Ternary Operator
+
+✅ `O(log n)` → Logarithmic Time (e.g., Binary Search)
+
+---
+
+# Summary
+
+Today I completed the study of Java operators by learning assignment, relational, logical, ternary, and introductory bitwise operators. I understood short-circuit evaluation, operator precedence, and the differences between similar-looking operators such as `=` vs `==`, `&&` vs `&`, and `||` vs `|`. I also learned the concept of logarithmic time complexity (`O(log n)`) through Binary Search.
