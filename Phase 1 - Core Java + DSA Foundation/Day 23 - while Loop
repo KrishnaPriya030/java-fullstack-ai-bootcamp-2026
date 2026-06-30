@@ -1,0 +1,247 @@
+# Day 23 - while Loop
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Learning Objectives
+
+- What is a while loop?
+- Syntax
+- Flow of execution
+- for vs while
+- Infinite while loop
+- Sentinel-controlled loop
+- Time Complexity
+
+---
+
+# What is a while Loop?
+
+A **while loop** is a control statement that repeatedly executes a block of code as long as the specified condition remains true.
+
+When the condition becomes false, the loop terminates.
+
+---
+
+# Why Do We Need a while Loop?
+
+The `while` loop is useful when the number of iterations is **not known beforehand**.
+
+Examples:
+
+- Reading user input
+- Menu-driven programs
+- Waiting for a condition
+- File processing
+
+---
+
+# Syntax
+
+```java
+while(condition){
+    // statements
+}
+```
+
+---
+
+# Flow of Execution
+
+1. Initialization
+2. Check condition
+3. If true, execute the loop body
+4. Update the variable
+5. Repeat until the condition becomes false
+
+---
+
+# Example
+
+```java
+int i = 1;
+
+while(i <= 5){
+    System.out.println(i);
+    i++;
+}
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+# Infinite while Loop
+
+Example
+
+```java
+while(true){
+    System.out.println("Hello");
+}
+```
+
+Reason
+
+- The condition is always true.
+- The loop never terminates unless interrupted.
+
+---
+
+# for vs while
+
+| for | while |
+|------|--------|
+| Number of iterations is usually known | Number of iterations may be unknown |
+| Initialization, condition, and update are together | Initialization is before the loop, update is inside the loop |
+| Best for counting | Best for condition-based repetition |
+
+---
+
+# Sentinel-controlled Loop
+
+A sentinel-controlled loop uses a special value to stop execution.
+
+Example
+
+```java
+int number = 0;
+
+while(number != -1){
+
+    number = sc.nextInt();
+
+}
+```
+
+Here, `-1` is the sentinel value.
+
+---
+
+# Time Complexity
+
+```java
+while(i <= n){
+    i++;
+}
+```
+
+Time Complexity
+
+```
+O(n)
+```
+
+---
+
+```java
+while(i <= 100){
+    i++;
+}
+```
+
+Time Complexity
+
+```
+O(1)
+```
+
+---
+
+# DSA Connection
+
+The `while` loop is used in:
+
+- Binary Search
+- Linked List Traversal
+- Queue Processing
+- Reading Input Until End
+- Graph Traversals
+
+---
+
+# Industry Connection
+
+The `while` loop is used in:
+
+- Login systems
+- ATM software
+- File reading
+- Network communication
+- Server request handling
+
+---
+
+# Common Interview Questions
+
+1. What is a while loop?
+2. When should you use a while loop?
+3. Difference between for and while.
+4. What is an infinite while loop?
+5. What is a sentinel-controlled loop?
+6. What is the time complexity of a while loop?
+
+---
+
+# Common Interview Mistakes
+
+❌ Forgetting to update the loop variable.
+
+```java
+int i = 1;
+
+while(i <= 5){
+    System.out.println(i);
+}
+```
+
+Infinite loop.
+
+---
+
+❌ Incorrect condition.
+
+```java
+int i = 10;
+
+while(i <= 1){
+    System.out.println(i);
+}
+```
+
+Loop never executes.
+
+---
+
+# Revision Box
+
+✅ while → Repeats while the condition is true.
+
+✅ Best when iterations are unknown.
+
+✅ Update the loop variable.
+
+✅ while(true) → Infinite loop.
+
+✅ Sentinel value → Special value that terminates the loop.
+
+✅ O(n) → Depends on input size.
+
+✅ O(1) → Fixed number of iterations.
+
+---
+
+# Summary
+
+Today I learned the `while` loop, which repeatedly executes a block of code while a condition remains true. I understood how it differs from the `for` loop, when it should be used, how infinite loops occur, the concept of sentinel-controlled loops, and the time complexity of `while` loops. I also learned how `while` loops are used in DSA algorithms such as binary search and linked list traversal.
