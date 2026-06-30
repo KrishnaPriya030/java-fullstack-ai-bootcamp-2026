@@ -1,0 +1,545 @@
+# Module 3 – Methods & Pattern Programming
+
+## Module Overview
+
+This module covers Java methods, method overloading, parameter passing, variable scope, static methods, recursion introduction, call stack, and pattern programming using nested loops.
+
+---
+
+# 1. Methods
+
+## Definition
+
+A **method** is a reusable block of code that performs a specific task. It helps avoid code duplication and improves readability and maintainability.
+
+---
+
+## Why Do We Need Methods?
+
+* Code Reusability
+* Reduces code duplication (DRY Principle)
+* Improves readability
+* Easier maintenance
+* Easier debugging and testing
+* Helps divide large programs into smaller modules
+
+---
+
+## Method Syntax
+
+```java
+returnType methodName(parameters){
+
+    // statements
+
+}
+```
+
+Example
+
+```java
+static void greet(){
+
+    System.out.println("Hello");
+
+}
+```
+
+---
+
+## Method Declaration
+
+The method header that contains:
+
+* Return type
+* Method name
+* Parameter list
+
+Example
+
+```java
+int add(int a, int b)
+```
+
+---
+
+## Method Definition
+
+The complete method including its body.
+
+```java
+int add(int a, int b){
+
+    return a + b;
+
+}
+```
+
+---
+
+## Method Call
+
+A method executes only when it is called.
+
+```java
+greet();
+```
+
+---
+
+# 2. Return Type
+
+The **return type** specifies the type of value returned by the method.
+
+Examples
+
+```java
+int
+double
+boolean
+String
+```
+
+---
+
+## void Method
+
+A `void` method performs an action but does not return any value.
+
+Example
+
+```java
+void display(){
+
+    System.out.println("Welcome");
+
+}
+```
+
+---
+
+# 3. Parameters and Arguments
+
+## Parameters
+
+Variables declared in the method definition.
+
+```java
+void add(int a, int b)
+```
+
+`a` and `b` are parameters.
+
+---
+
+## Arguments
+
+Actual values passed during the method call.
+
+```java
+add(10, 20);
+```
+
+`10` and `20` are arguments.
+
+---
+
+## Difference
+
+| Parameters                    | Arguments                 |
+| ----------------------------- | ------------------------- |
+| Declared in method definition | Passed during method call |
+| Placeholders                  | Actual values             |
+
+---
+
+# 4. Method Overloading
+
+## Definition
+
+Method overloading is defining multiple methods with the **same name** but **different parameter lists** within the same class.
+
+---
+
+## Valid Ways to Overload
+
+### Change Number of Parameters
+
+```java
+add(int a, int b)
+
+add(int a, int b, int c)
+```
+
+### Change Data Type
+
+```java
+add(int a, int b)
+
+add(double a, double b)
+```
+
+### Change Order of Parameters
+
+```java
+display(int a, String b)
+
+display(String b, int a)
+```
+
+---
+
+## Invalid Method Overloading
+
+Changing only the return type is **not allowed**.
+
+```java
+int add(int a, int b)
+
+double add(int a, int b)
+```
+
+Reason:
+
+Java identifies overloaded methods using the **method name and parameter list**, not the return type.
+
+---
+
+# 5. Pass by Value
+
+Java is **pass by value**.
+
+A copy of the variable's value is passed to the method, so changes inside the method do not affect the original variable.
+
+Example
+
+```java
+int a = 10;
+
+change(a);
+```
+
+The original value of `a` remains unchanged.
+
+---
+
+# 6. Variable Scope
+
+Scope is the region where a variable can be accessed.
+
+---
+
+## Local Variable
+
+Declared inside a method or block.
+
+Accessible only within that method.
+
+```java
+void display(){
+
+    int x = 10;
+
+}
+```
+
+---
+
+## Instance Variable
+
+Declared inside a class but outside methods.
+
+Each object gets its own copy.
+
+```java
+class Student{
+
+    int age;
+
+}
+```
+
+---
+
+## Static Variable (Introduction)
+
+Declared using the `static` keyword.
+
+Shared among all objects of the class.
+
+```java
+static int count;
+```
+
+---
+
+# 7. Static Methods
+
+A static method belongs to the class rather than an object.
+
+It can be called without creating an object.
+
+Example
+
+```java
+static void greet(){
+
+    System.out.println("Hello");
+
+}
+```
+
+---
+
+## Why is `main()` Static?
+
+The JVM calls the `main()` method directly without creating an object of the class.
+
+---
+
+# 8. Call Stack
+
+Whenever a method is called, it is placed on the **Call Stack**.
+
+The call stack follows the **LIFO (Last In, First Out)** principle.
+
+Example
+
+```
+main()
+
+↓
+
+methodA()
+
+↓
+
+methodB()
+
+↓
+
+methodB Ends
+
+↓
+
+methodA Ends
+
+↓
+
+main Ends
+```
+
+---
+
+# 9. Recursion (Introduction)
+
+Recursion is the process in which a method calls itself.
+
+A recursive method must have:
+
+* Base Case
+* Recursive Call
+
+Without a base case, it results in a `StackOverflowError`.
+
+---
+
+# 10. Pattern Programming
+
+## Why Pattern Programming?
+
+Pattern programming develops logical thinking using nested loops.
+
+Instead of memorizing patterns, analyze:
+
+1. Number of rows
+2. What to print in each row
+
+---
+
+# Nested Loop
+
+A nested loop is a loop inside another loop.
+
+* Outer Loop → Controls rows
+* Inner Loop → Controls columns
+
+---
+
+# Square Pattern
+
+```text
+* * * *
+* * * *
+* * * *
+* * * *
+```
+
+Time Complexity:
+
+```
+O(n²)
+```
+
+---
+
+# Rectangle Pattern
+
+```text
+* * * * *
+* * * * *
+* * * * *
+```
+
+Rows and columns are fixed independently.
+
+---
+
+# Right Triangle
+
+```text
+*
+* *
+* * *
+* * * *
+```
+
+Logic:
+
+Stars printed = Current row number.
+
+---
+
+# Inverted Triangle
+
+```text
+* * * *
+* * *
+* *
+*
+```
+
+Logic:
+
+Stars printed = `n - row + 1`
+
+---
+
+# Number Triangle
+
+```text
+1
+1 2
+1 2 3
+1 2 3 4
+```
+
+Logic:
+
+Print numbers from `1` to the current row number.
+
+---
+
+# Hollow Square (Introduction)
+
+```text
+* * * *
+*     *
+*     *
+* * * *
+```
+
+Print `*` on:
+
+* First row
+* Last row
+* First column
+* Last column
+
+Otherwise, print a space.
+
+---
+
+# Pattern Solving Strategy
+
+1. Count the number of rows.
+2. Observe what changes in each row.
+3. Write the outer loop.
+4. Write the inner loop.
+5. Print a new line after each row.
+
+---
+
+# Time Complexity
+
+Single Loop
+
+```
+O(n)
+```
+
+Nested Loop
+
+```
+O(n²)
+```
+
+---
+
+# DSA Connection
+
+These concepts are used in:
+
+* Arrays
+* Matrices
+* Searching
+* Sorting
+* Graph Traversal
+* Dynamic Programming
+* Image Processing
+
+---
+
+# Industry Connection
+
+Methods improve:
+
+* Reusability
+* Maintainability
+* Readability
+* Testing
+
+Nested loops are used in:
+
+* Matrix operations
+* Image processing
+* Grid-based applications
+* Game development
+
+---
+
+# Frequently Asked Interview Questions
+
+1. What is a method?
+2. Why are methods needed?
+3. Difference between parameters and arguments.
+4. What is method overloading?
+5. What are the rules of method overloading?
+6. Why can't methods be overloaded by changing only the return type?
+7. What is pass by value?
+8. What is variable scope?
+9. Difference between local and instance variables.
+10. What is a static method?
+11. Why is `main()` static?
+12. What is recursion?
+13. What is a call stack?
+14. What is a nested loop?
+15. Which loop controls rows and columns?
+16. What is the time complexity of nested loops?
+17. How do you solve a new pattern?
+
+---
+
+# Module Summary
+
+In this module, I learned how Java methods improve code organization and reusability, understood method declaration, definition, parameters, arguments, return types, method overloading, pass by value, variable scope, static methods, recursion basics, and the call stack. I also learned how to solve pattern programming problems using nested loops by analyzing rows and columns instead of memorizing solutions.
