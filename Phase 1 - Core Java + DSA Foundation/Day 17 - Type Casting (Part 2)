@@ -1,0 +1,572 @@
+# Day 17 - Type Casting (Part 2)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Type Casting
+- Widening
+- Narrowing
+- Variables
+- Data Types
+
+---
+
+# Learning Objectives
+
+- Type Promotion
+- Integer Overflow
+- Underflow
+- Precision Loss
+- Character Type Casting
+- String Concatenation
+- Choosing Data Types in DSA
+
+---
+
+# Revision
+
+Previously, we learned:
+
+- Widening Type Casting
+- Narrowing Type Casting
+- Data Loss
+
+Today we learned what happens during arithmetic operations and type conversions.
+
+---
+
+# What is Type Promotion?
+
+Type Promotion is the automatic conversion of smaller data types into a larger compatible data type during arithmetic expressions.
+
+Java performs this automatically.
+
+---
+
+# Example 1
+
+```java
+byte a = 10;
+byte b = 20;
+
+int c = a + b;
+
+System.out.println(c);
+```
+
+Output
+
+```
+30
+```
+
+Explanation
+
+```
+byte + byte
+
+↓
+
+int + int
+
+↓
+
+int
+```
+
+Java automatically promotes `byte`, `short`, and `char` to `int` before performing arithmetic operations.
+
+---
+
+# Example 2
+
+```java
+char c = 'A';
+
+int value = c + 1;
+
+System.out.println(value);
+```
+
+Output
+
+```
+66
+```
+
+Explanation
+
+```
+'A'
+
+↓
+
+Unicode Value
+
+↓
+
+65
+
+↓
+
+65 + 1
+
+↓
+
+66
+```
+
+---
+
+# Example 3
+
+```java
+int x = 20;
+
+double y = 5.5;
+
+double result = x + y;
+```
+
+Output
+
+```
+25.5
+```
+
+Explanation
+
+```
+int
+
+↓
+
+double
+
+↓
+
+double + double
+
+↓
+
+double
+```
+
+---
+
+# Promotion Order
+
+```
+byte
+
+↓
+
+short
+
+↓
+
+char
+
+↓
+
+int
+
+↓
+
+long
+
+↓
+
+float
+
+↓
+
+double
+```
+
+---
+
+# Integer Overflow
+
+Overflow occurs when a value becomes greater than the maximum value that a data type can store.
+
+Example
+
+```java
+byte x = 127;
+
+x++;
+
+System.out.println(x);
+```
+
+Output
+
+```
+-128
+```
+
+Reason
+
+A `byte` stores values only from:
+
+```
+-128
+
+↓
+
+127
+```
+
+After reaching 127, the next value wraps around to -128.
+
+---
+
+# Underflow
+
+Underflow occurs when a value becomes smaller than the minimum value that a data type can store.
+
+Example
+
+```java
+byte x = -128;
+
+x--;
+
+System.out.println(x);
+```
+
+Output
+
+```
+127
+```
+
+The value wraps around to the maximum value.
+
+---
+
+# Precision Loss
+
+Precision Loss occurs when a higher-precision data type is converted into a lower-precision data type.
+
+Example
+
+```java
+double d = 123.987654;
+
+float f = (float)d;
+
+System.out.println(f);
+```
+
+The output may not preserve all decimal digits because `float` has lower precision than `double`.
+
+---
+
+# Character Type Casting
+
+Characters are stored internally as Unicode values.
+
+Example
+
+```java
+char c = 'A';
+
+int value = c;
+
+System.out.println(value);
+```
+
+Output
+
+```
+65
+```
+
+---
+
+# Integer to Character
+
+```java
+int value = 66;
+
+char c = (char)value;
+
+System.out.println(c);
+```
+
+Output
+
+```
+B
+```
+
+---
+
+# String Concatenation
+
+When one operand is a `String`, the `+` operator performs string concatenation.
+
+---
+
+## Example 1
+
+```java
+System.out.println("Java" + 10 + 20);
+```
+
+Output
+
+```
+Java1020
+```
+
+Evaluation
+
+```
+"Java" + 10
+
+↓
+
+Java10
+
+↓
+
+Java10 + 20
+
+↓
+
+Java1020
+```
+
+---
+
+## Example 2
+
+```java
+System.out.println(10 + 20 + "Java");
+```
+
+Output
+
+```
+30Java
+```
+
+Evaluation
+
+```
+10 + 20
+
+↓
+
+30
+
+↓
+
+30 + "Java"
+
+↓
+
+30Java
+```
+
+---
+
+# Choosing the Correct Data Type (DSA)
+
+Always read the problem constraints before selecting a data type.
+
+Example
+
+If
+
+```
+n ≤ 10⁹
+```
+
+Use
+
+```java
+int n;
+```
+
+---
+
+If
+
+```
+n ≤ 10¹⁸
+```
+
+Use
+
+```java
+long n;
+```
+
+Using an incorrect data type can cause overflow and produce wrong answers.
+
+---
+
+# Industry Connection
+
+Type promotion and type casting are used in:
+
+- Banking Systems
+- Financial Applications
+- Scientific Calculations
+- Database Applications
+- Report Generation
+- Data Processing
+
+Choosing the correct data type is important for performance and correctness.
+
+---
+
+# Important Definitions
+
+## Type Promotion
+
+Automatic conversion of smaller data types (`byte`, `short`, `char`) to `int` during arithmetic operations.
+
+---
+
+## Overflow
+
+Occurs when a value exceeds the maximum limit of a data type.
+
+---
+
+## Underflow
+
+Occurs when a value becomes smaller than the minimum limit of a data type.
+
+---
+
+## Precision Loss
+
+Loss of accuracy when converting a higher-precision data type into a lower-precision one.
+
+---
+
+## Unicode
+
+A universal character encoding standard that assigns a unique numeric value to every character.
+
+---
+
+# Common Interview Questions
+
+1. What is type promotion?
+2. Why does `byte + byte` return an `int`?
+3. What is overflow?
+4. What is underflow?
+5. What is precision loss?
+6. Why are characters stored as numbers internally?
+7. Explain `"Java" + 10 + 20`.
+8. Explain `10 + 20 + "Java"`.
+
+---
+
+# Common Interview Mistakes
+
+❌
+
+```java
+byte c = a + b;
+```
+
+Compilation Error.
+
+---
+
+✅
+
+```java
+int c = a + b;
+```
+
+or
+
+```java
+byte c = (byte)(a + b);
+```
+
+---
+
+❌ Thinking Java rounds decimals during narrowing.
+
+Example
+
+```java
+(int)99.99
+```
+
+Output
+
+```
+99
+```
+
+Java truncates the fractional part.
+
+---
+
+❌ Assuming characters are stored directly as letters.
+
+Characters are stored internally as Unicode values.
+
+---
+
+❌ Ignoring problem constraints while choosing data types.
+
+Always select a data type that can store the maximum possible value.
+
+---
+
+# Commands You Should Know
+
+Compile
+
+```bash
+javac TypePromotionDemo.java
+```
+
+Run
+
+```bash
+java TypePromotionDemo
+```
+
+---
+
+# Revision Box
+
+✅ Type Promotion → Automatic promotion during arithmetic.
+
+✅ `byte + byte` → `int`
+
+✅ Overflow → Value exceeds maximum limit.
+
+✅ Underflow → Value goes below minimum limit.
+
+✅ Precision Loss → Higher precision → Lower precision.
+
+✅ Characters are stored as Unicode values.
+
+✅ `"Java" + 10 + 20` → `Java1020`
+
+✅ `10 + 20 + "Java"` → `30Java`
+
+---
+
+# Summary
+
+Today I learned how Java performs type promotion during arithmetic operations, why `byte + byte` results in an `int`, and the concepts of overflow, underflow, and precision loss. I also learned that characters are stored internally as Unicode values and understood how Java evaluates expressions involving both numbers and strings. Finally, I learned the importance of choosing the correct data type based on problem constraints to avoid overflow in DSA and real-world applications.
