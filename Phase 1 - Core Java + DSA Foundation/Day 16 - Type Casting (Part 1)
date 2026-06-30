@@ -1,0 +1,507 @@
+# Day 16 - Type Casting (Part 1)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Variables
+- Data Types
+- Operators
+
+---
+
+# Learning Objectives
+
+- Type Casting
+- Widening Type Casting
+- Narrowing Type Casting
+- Data Loss
+- Type Promotion (Introduction)
+- Why Type Casting is Needed
+
+---
+
+# What is Type Casting?
+
+Type Casting is the process of converting a value from one data type to another.
+
+Example
+
+```java
+int age = 22;
+
+double value = age;
+```
+
+Here,
+
+```
+int
+
+↓
+
+double
+```
+
+---
+
+# Why is Type Casting Needed?
+
+Sometimes different variables require different data types.
+
+Type casting helps us:
+
+- Store one data type inside another.
+- Perform calculations between different data types.
+- Convert values according to program requirements.
+
+Example
+
+```java
+double marks = 89.5;
+
+int finalMarks = (int) marks;
+```
+
+---
+
+# Types of Type Casting
+
+```
+Type Casting
+
+│
+
+├── Widening (Implicit / Automatic)
+
+└── Narrowing (Explicit / Manual)
+```
+
+---
+
+# Widening Type Casting
+
+Also known as:
+
+- Implicit Casting
+- Automatic Casting
+
+Java performs widening automatically because there is no loss of information.
+
+---
+
+## Example
+
+```java
+int number = 25;
+
+double value = number;
+
+System.out.println(value);
+```
+
+Output
+
+```
+25.0
+```
+
+---
+
+# Why is Widening Safe?
+
+The destination data type can store all the values of the source data type.
+
+No data is lost.
+
+Example
+
+```
+25
+
+↓
+
+25.0
+```
+
+---
+
+# Widening Order
+
+```
+byte
+
+↓
+
+short
+
+↓
+
+int
+
+↓
+
+long
+
+↓
+
+float
+
+↓
+
+double
+```
+
+Java automatically converts values from a smaller compatible data type to a larger one.
+
+---
+
+# Examples of Widening
+
+```java
+byte b = 10;
+
+short s = b;
+```
+
+---
+
+```java
+short s = 100;
+
+int x = s;
+```
+
+---
+
+```java
+int x = 200;
+
+long y = x;
+```
+
+---
+
+```java
+long l = 500;
+
+float f = l;
+```
+
+---
+
+```java
+float f = 25.5f;
+
+double d = f;
+```
+
+---
+
+# Narrowing Type Casting
+
+Also known as:
+
+- Explicit Casting
+- Manual Casting
+
+Java does not perform narrowing automatically because it may cause data loss or overflow.
+
+The programmer must explicitly request the conversion.
+
+---
+
+## Example
+
+```java
+double price = 99.99;
+
+int value = (int) price;
+
+System.out.println(value);
+```
+
+Output
+
+```
+99
+```
+
+---
+
+# Why is Narrowing Manual?
+
+Converting from a larger data type to a smaller one may result in:
+
+- Data Loss
+- Overflow
+
+Therefore, Java requires an explicit cast.
+
+---
+
+# Data Loss
+
+Data Loss occurs when some information cannot be stored after conversion.
+
+Example
+
+```java
+double marks = 89.75;
+
+int finalMarks = (int) marks;
+```
+
+Output
+
+```
+89
+```
+
+Lost Value
+
+```
+0.75
+```
+
+Java truncates the fractional part; it does not round the value.
+
+---
+
+# Widening vs Narrowing
+
+| Widening | Narrowing |
+|-----------|-----------|
+| Automatic | Manual |
+| Implicit Casting | Explicit Casting |
+| Safe | May cause Data Loss |
+| Small → Large | Large → Small |
+
+---
+
+# Memory Representation
+
+Program
+
+```java
+int x = 20;
+
+double y = x;
+```
+
+Stack Memory
+
+```
+x
+
+↓
+
+20
+
+y
+
+↓
+
+20.0
+```
+
+Primitive local variables store their values directly in stack memory.
+
+---
+
+# Type Promotion (Introduction)
+
+During arithmetic operations, Java automatically promotes smaller data types to `int`.
+
+Example
+
+```java
+byte a = 10;
+
+byte b = 20;
+
+int result = a + b;
+```
+
+Here,
+
+`byte` values are promoted to `int` before addition.
+
+---
+
+# DSA Foundation
+
+## Why Data Types Matter
+
+Choosing the correct data type prevents errors such as overflow and ensures efficient memory usage.
+
+Example
+
+```java
+long population = 5000000000L;
+```
+
+Using `int` here would not be valid because the value exceeds the range of `int`.
+
+---
+
+# Industry Connection
+
+Type casting is commonly used in:
+
+- Banking Applications
+- Financial Calculations
+- Data Processing
+- Database Applications
+- APIs
+- Report Generation
+
+---
+
+# Important Definitions
+
+## Type Casting
+
+The process of converting one data type into another.
+
+---
+
+## Widening
+
+Automatic conversion from a smaller data type to a larger data type.
+
+---
+
+## Narrowing
+
+Manual conversion from a larger data type to a smaller data type.
+
+---
+
+## Data Loss
+
+Loss of information during type conversion.
+
+---
+
+## Type Promotion
+
+Automatic conversion of smaller data types (such as `byte` and `short`) to `int` during arithmetic operations.
+
+---
+
+# Common Interview Questions
+
+1. What is type casting?
+2. Why is type casting required?
+3. What are the types of type casting?
+4. Difference between widening and narrowing.
+5. Why is widening automatic?
+6. Why is narrowing manual?
+7. What is data loss?
+8. What is type promotion?
+9. Why does `double` to `int` lose decimals?
+
+---
+
+# Common Interview Mistakes
+
+❌
+
+```java
+double d = 10.5;
+
+int x = d;
+```
+
+Wrong.
+
+---
+
+✅
+
+```java
+int x = (int)d;
+```
+
+Correct.
+
+---
+
+❌ Thinking Java rounds values during narrowing.
+
+Example
+
+```java
+(int)99.99
+```
+
+Output
+
+```
+99
+```
+
+Not
+
+```
+100
+```
+
+Java truncates the decimal part.
+
+---
+
+❌ Assuming widening always changes the value.
+
+Example
+
+```java
+int x = 20;
+
+double y = x;
+```
+
+The numeric value remains the same; only its representation changes.
+
+---
+
+# Commands You Should Know
+
+Compile
+
+```bash
+javac TypeCastingDemo.java
+```
+
+Run
+
+```bash
+java TypeCastingDemo
+```
+
+---
+
+# Revision Box
+
+✅ Type Casting → Convert one data type to another.
+
+✅ Widening → Automatic, Safe.
+
+✅ Narrowing → Manual, May cause Data Loss.
+
+✅ Data Loss → Information removed during conversion.
+
+✅ Type Promotion → `byte` and `short` become `int` during arithmetic.
+
+✅ Java truncates decimals during narrowing.
+
+---
+
+# Summary
+
+Today I learned the concept of type casting in Java. I understood why type casting is required, the difference between widening and narrowing, why widening is automatic and narrowing is manual, how data loss occurs during narrowing, and the basic concept of type promotion. I also learned why choosing the correct data type is important for writing efficient and error-free programs.
