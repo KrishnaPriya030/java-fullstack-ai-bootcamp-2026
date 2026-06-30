@@ -1,0 +1,427 @@
+# Day 20 - Control Statements (Part 1)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Variables
+- Operators
+- Scanner
+- Boolean Expressions
+
+---
+
+# Learning Objectives
+
+- Control Statements
+- if Statement
+- if-else Statement
+- else-if Ladder
+- Nested if
+- Boolean Conditions
+- Time Complexity
+
+---
+
+# What are Control Statements?
+
+Control statements are statements that control the flow of execution of a program based on conditions or repetition.
+
+They help the program make decisions.
+
+---
+
+# Types of Control Statements
+
+```
+Control Statements
+
+│
+
+├── Decision Making
+│     ├── if
+│     ├── if-else
+│     ├── else-if
+│     └── switch
+│
+├── Looping
+│     ├── for
+│     ├── while
+│     └── do-while
+│
+└── Jump Statements
+      ├── break
+      ├── continue
+      └── return
+```
+
+---
+
+# Why Do We Need Control Statements?
+
+Without control statements, every statement executes one after another.
+
+Control statements allow programs to make decisions.
+
+Example
+
+```java
+if(age >= 18){
+    System.out.println("Eligible to Vote");
+}
+```
+
+---
+
+# if Statement
+
+## Syntax
+
+```java
+if(condition){
+    // statements
+}
+```
+
+If the condition is `true`, the block executes.
+
+If the condition is `false`, the block is skipped.
+
+---
+
+## Example
+
+```java
+int age = 20;
+
+if(age >= 18){
+    System.out.println("Eligible");
+}
+```
+
+Output
+
+```
+Eligible
+```
+
+---
+
+# if-else Statement
+
+Used when one block should execute if the condition is true and another block should execute if the condition is false.
+
+## Syntax
+
+```java
+if(condition){
+
+}
+else{
+
+}
+```
+
+---
+
+## Example
+
+```java
+int marks = 35;
+
+if(marks >= 40){
+    System.out.println("Pass");
+}
+else{
+    System.out.println("Fail");
+}
+```
+
+Output
+
+```
+Fail
+```
+
+---
+
+# else-if Ladder
+
+Used when multiple conditions need to be checked.
+
+## Syntax
+
+```java
+if(condition1){
+
+}
+else if(condition2){
+
+}
+else if(condition3){
+
+}
+else{
+
+}
+```
+
+Java checks conditions from top to bottom.
+
+As soon as one condition becomes true, the corresponding block executes and the remaining conditions are skipped.
+
+---
+
+## Example
+
+```java
+int marks = 82;
+
+if(marks >= 90){
+    System.out.println("Grade A");
+}
+else if(marks >= 75){
+    System.out.println("Grade B");
+}
+else if(marks >= 50){
+    System.out.println("Grade C");
+}
+else{
+    System.out.println("Fail");
+}
+```
+
+Output
+
+```
+Grade B
+```
+
+---
+
+# Nested if
+
+A nested if is an if statement inside another if statement.
+
+Example
+
+```java
+int age = 25;
+boolean hasLicense = true;
+
+if(age >= 18){
+
+    if(hasLicense){
+        System.out.println("Can Drive");
+    }
+
+}
+```
+
+Output
+
+```
+Can Drive
+```
+
+---
+
+# Boolean Expressions
+
+The condition inside an if statement must evaluate to a boolean value.
+
+Examples
+
+```java
+age >= 18
+```
+
+```java
+marks > 40
+```
+
+```java
+salary < 50000
+```
+
+These expressions return either:
+
+```
+true
+```
+
+or
+
+```
+false
+```
+
+---
+
+# Time Complexity
+
+A single if statement performs one condition check.
+
+Time Complexity
+
+```
+O(1)
+```
+
+---
+
+# DSA Connection
+
+Decision making is used in every algorithm.
+
+Examples
+
+- Linear Search
+- Binary Search
+- Sorting Algorithms
+- Graph Algorithms
+
+Without if statements, algorithms cannot make decisions.
+
+---
+
+# Industry Connection
+
+Control statements are used in:
+
+- Login Systems
+- ATM Applications
+- Banking Software
+- E-commerce Websites
+- Role-based Authorization
+- API Validation
+
+---
+
+# Important Definitions
+
+## Control Statement
+
+A statement that controls the flow of execution of a program.
+
+---
+
+## if Statement
+
+Executes a block only when the condition is true.
+
+---
+
+## if-else Statement
+
+Executes one block when the condition is true and another block when the condition is false.
+
+---
+
+## else-if Ladder
+
+Checks multiple conditions sequentially until one becomes true.
+
+---
+
+## Nested if
+
+An if statement inside another if statement.
+
+---
+
+# Common Interview Questions
+
+1. What are control statements?
+2. Why are they needed?
+3. Difference between if and if-else.
+4. When should you use an else-if ladder?
+5. What is a nested if?
+6. What data type must an if condition return?
+7. What is the time complexity of an if statement?
+
+---
+
+# Common Interview Mistakes
+
+❌
+
+```java
+if(age = 18)
+```
+
+Wrong.
+
+---
+
+✅
+
+```java
+if(age == 18)
+```
+
+Correct.
+
+---
+
+❌
+
+```java
+if(10)
+```
+
+Compilation Error.
+
+Java requires a boolean expression.
+
+---
+
+❌
+
+Using multiple independent if statements when only one result should be printed.
+
+Use an else-if ladder instead.
+
+---
+
+# Commands You Should Know
+
+Compile
+
+```bash
+javac IfDemo.java
+```
+
+Run
+
+```bash
+java IfDemo
+```
+
+---
+
+# Revision Box
+
+✅ Control Statements → Control program execution.
+
+✅ if → Executes only when true.
+
+✅ if-else → Executes one of two blocks.
+
+✅ else-if → Used for multiple conditions.
+
+✅ Nested if → if inside another if.
+
+✅ Condition must return boolean.
+
+✅ Time Complexity → O(1)
+
+---
+
+# Summary
+
+Today I learned how Java programs make decisions using control statements. I understood the purpose of `if`, `if-else`, `else-if` ladder, and nested `if` statements. I also learned that an `if` condition must evaluate to a boolean value, how Java checks conditions from top to bottom, and why decision-making statements are essential in algorithms and real-world applications.
