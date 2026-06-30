@@ -1,0 +1,218 @@
+# Day 25 - Jump Statements (`break`, `continue`, `return`)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Learning Objectives
+
+- What are jump statements?
+- `break`
+- `continue`
+- `return`
+- Labeled `break`
+- Labeled `continue`
+- Difference between all three
+- Time Complexity implications
+
+---
+
+# What are Jump Statements?
+
+Jump statements are statements that alter the normal flow of execution by transferring control from one part of the program to another.
+
+Java provides three jump statements:
+
+- `break`
+- `continue`
+- `return`
+
+---
+
+# `break` Statement
+
+## Definition
+
+The `break` statement immediately terminates the nearest loop or `switch` statement.
+
+Control transfers to the first statement after the loop or `switch`.
+
+### Example
+
+```java
+for(int i = 1; i <= 5; i++){
+    if(i == 3){
+        break;
+    }
+    System.out.println(i);
+}
+```
+
+Output
+
+```
+1
+2
+```
+
+---
+
+# `continue` Statement
+
+## Definition
+
+The `continue` statement skips the remaining statements of the current iteration and immediately starts the next iteration of the loop.
+
+### Example
+
+```java
+for(int i = 1; i <= 5; i++){
+    if(i == 3){
+        continue;
+    }
+    System.out.println(i);
+}
+```
+
+Output
+
+```
+1
+2
+4
+5
+```
+
+---
+
+# `return` Statement
+
+## Definition
+
+The `return` statement immediately terminates the current method and optionally returns a value to the caller.
+
+### Example
+
+```java
+public static int square(int n){
+    return n * n;
+}
+```
+
+---
+
+# Difference Between `break`, `continue`, and `return`
+
+| Statement | Purpose |
+|-----------|---------|
+| `break` | Terminates the nearest loop or `switch` |
+| `continue` | Skips the current iteration and continues the loop |
+| `return` | Terminates the current method and optionally returns a value |
+
+---
+
+# Labeled `break`
+
+A labeled `break` exits the specified outer loop.
+
+---
+
+# Labeled `continue`
+
+A labeled `continue` skips to the next iteration of the specified outer loop.
+
+---
+
+# Time Complexity
+
+Jump statements do not change the complexity class, but they can reduce the actual number of iterations.
+
+Example:
+
+```java
+for(int i = 0; i < n; i++){
+    if(arr[i] == target){
+        break;
+    }
+}
+```
+
+Worst Case
+
+```
+O(n)
+```
+
+Best Case
+
+```
+O(1)
+```
+
+---
+
+# DSA Connection
+
+Used in:
+
+- Linear Search
+- Binary Search
+- Backtracking
+- Graph Traversals
+- Nested Loops
+
+---
+
+# Industry Connection
+
+Used in:
+
+- Menu-driven programs
+- Input validation
+- Search operations
+- Business logic
+- Exception handling
+
+---
+
+# Common Interview Questions
+
+1. What are jump statements?
+2. What is the purpose of `break`?
+3. What is the purpose of `continue`?
+4. What is the purpose of `return`?
+5. Difference between `break`, `continue`, and `return`.
+6. What is a labeled `break`?
+7. What is a labeled `continue`?
+
+---
+
+# Common Interview Mistakes
+
+❌ Confusing `break` with `continue`.
+
+❌ Thinking `return` only exits a loop.
+
+`return` exits the **entire method**.
+
+---
+
+# Revision Box
+
+✅ `break` → Ends the nearest loop or `switch`.
+
+✅ `continue` → Skips the current iteration.
+
+✅ `return` → Ends the current method.
+
+✅ Labeled `break` → Exits an outer loop.
+
+✅ Labeled `continue` → Continues the next iteration of an outer loop.
+
+---
+
+# Summary
+
+Today I learned Java jump statements: `break`, `continue`, and `return`. I understood that `break` terminates the nearest loop or `switch`, `continue` skips the current iteration, and `return` exits the current method and may return a value. I also learned about labeled `break` and `continue`, their practical uses, and how these statements are commonly used in DSA algorithms and real-world Java applications.
