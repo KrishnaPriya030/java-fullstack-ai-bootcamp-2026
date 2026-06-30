@@ -1,0 +1,316 @@
+# Day 22 - for Loop (Part 1)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Learning Objectives
+
+- What is a loop?
+- Why loops are needed
+- for loop syntax
+- Initialization
+- Condition
+- Update
+- Flow of execution
+- Infinite loops
+- Time Complexity
+
+---
+
+# What is a Loop?
+
+A loop is a control statement that repeatedly executes a block of code as long as a specified condition is true.
+
+---
+
+# Why Do We Need Loops?
+
+Loops help avoid writing the same code multiple times.
+
+Instead of:
+
+```java
+System.out.println("Hello");
+System.out.println("Hello");
+System.out.println("Hello");
+```
+
+We can write:
+
+```java
+for(int i = 1; i <= 3; i++){
+    System.out.println("Hello");
+}
+```
+
+---
+
+# Types of Loops
+
+- for
+- while
+- do-while
+
+---
+
+# for Loop Syntax
+
+```java
+for(initialization; condition; update){
+    // statements
+}
+```
+
+---
+
+# Parts of a for Loop
+
+## Initialization
+
+Runs only once before the loop starts.
+
+Example:
+
+```java
+int i = 1;
+```
+
+---
+
+## Condition
+
+Checked before every iteration.
+
+- true → Continue loop
+- false → Exit loop
+
+---
+
+## Update
+
+Runs after each iteration.
+
+Examples:
+
+```java
+i++;
+i--;
+i += 2;
+```
+
+---
+
+# Example
+
+```java
+for(int i = 1; i <= 5; i++){
+    System.out.println(i);
+}
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+# Flow of Execution
+
+Initialization
+
+↓
+
+Condition
+
+↓
+
+True?
+
+↓
+
+Execute Loop Body
+
+↓
+
+Update
+
+↓
+
+Condition Again
+
+↓
+
+False?
+
+↓
+
+Exit Loop
+
+---
+
+# Reverse Loop
+
+```java
+for(int i = 10; i >= 1; i--){
+    System.out.println(i);
+}
+```
+
+Output
+
+```
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+```
+
+---
+
+# Infinite Loop
+
+Example
+
+```java
+for(;;){
+    System.out.println("Hello");
+}
+```
+
+Reason
+
+- No condition is provided.
+- The condition is always considered true.
+- The loop never terminates unless interrupted.
+
+---
+
+# Time Complexity
+
+```java
+for(int i = 1; i <= n; i++)
+```
+
+Time Complexity
+
+```
+O(n)
+```
+
+---
+
+```java
+for(int i = 1; i <= 100; i++)
+```
+
+Time Complexity
+
+```
+O(1)
+```
+
+---
+
+# DSA Connection
+
+Loops are used in:
+
+- Array Traversal
+- String Traversal
+- Searching
+- Sorting
+- Matrix Problems
+
+---
+
+# Industry Connection
+
+Loops are used in:
+
+- Processing records
+- Reading files
+- Database operations
+- API response handling
+- Data validation
+
+---
+
+# Common Interview Questions
+
+1. What is a loop?
+2. Why are loops used?
+3. Explain each part of the for loop.
+4. What is an infinite loop?
+5. What is the time complexity of a for loop?
+6. Difference between O(n) and O(1) loops.
+
+---
+
+# Common Mistakes
+
+❌ Wrong condition
+
+```java
+for(int i = 1; i >= 5; i++)
+```
+
+Loop never executes.
+
+---
+
+❌ Missing update
+
+```java
+for(int i = 1; i <= 5;)
+```
+
+May create an infinite loop.
+
+---
+
+❌ Wrong update direction
+
+```java
+for(int i = 10; i >= 1; i++)
+```
+
+Infinite loop.
+
+---
+
+# Revision Box
+
+✅ Loop → Repeats a block of code.
+
+✅ Initialization → Runs once.
+
+✅ Condition → Checked before every iteration.
+
+✅ Update → Runs after each iteration.
+
+✅ Infinite Loop → Never ends.
+
+✅ O(n) → Depends on input size.
+
+✅ O(1) → Fixed number of iterations.
+
+---
+
+# Summary
+
+Today I learned the `for` loop, which is used to repeatedly execute a block of code while a condition remains true. I understood the purpose of initialization, condition, and update, learned how the execution flow works, identified infinite loops, and related loop iterations to time complexity. I also learned that loops are fundamental to DSA because they are used in array traversal, string processing, searching, sorting, and many other algorithms.
