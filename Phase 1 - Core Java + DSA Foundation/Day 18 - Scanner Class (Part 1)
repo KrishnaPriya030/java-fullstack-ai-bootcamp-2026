@@ -1,0 +1,499 @@
+# Day 18 - Scanner Class (Part 1)
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Variables
+- Data Types
+- Objects (Basic Idea)
+- Stack & Heap Memory
+
+---
+
+# Learning Objectives
+
+- Scanner Class
+- User Input
+- Import Statement
+- Creating Scanner Object
+- Reading Different Data Types
+- Memory Representation
+- Common Mistakes
+
+---
+
+# Why Do We Need Scanner?
+
+Until now we used hardcoded values.
+
+Example
+
+```java
+int age = 22;
+```
+
+The value never changes unless the program is modified.
+
+To accept values from the user during program execution, Java provides the **Scanner** class.
+
+---
+
+# What is Scanner?
+
+The **Scanner** class is a predefined Java class used to read input from the keyboard or other input sources.
+
+Package
+
+```java
+java.util
+```
+
+---
+
+# Importing Scanner
+
+Before using Scanner, import it.
+
+```java
+import java.util.Scanner;
+```
+
+---
+
+# Why Import Scanner?
+
+The Scanner class belongs to the **java.util** package.
+
+The import statement tells the Java compiler where to find the Scanner class.
+
+Without importing it, the program will not compile.
+
+---
+
+# Creating a Scanner Object
+
+Syntax
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+Explanation
+
+## Scanner
+
+Class Name
+
+---
+
+## sc
+
+Reference Variable
+
+Points to the Scanner object.
+
+---
+
+## new
+
+Creates a new object in heap memory.
+
+---
+
+## Scanner(System.in)
+
+Creates a Scanner object that reads input from the standard input stream.
+
+`System.in` is normally connected to the keyboard.
+
+---
+
+# Input Flow
+
+```
+Keyboard
+
+↓
+
+System.in
+
+↓
+
+Scanner Object
+
+↓
+
+Java Program
+```
+
+---
+
+# Reading Different Data Types
+
+## Integer
+
+```java
+int age = sc.nextInt();
+```
+
+---
+
+## Double
+
+```java
+double salary = sc.nextDouble();
+```
+
+---
+
+## Float
+
+```java
+float marks = sc.nextFloat();
+```
+
+---
+
+## Long
+
+```java
+long population = sc.nextLong();
+```
+
+---
+
+## Boolean
+
+```java
+boolean passed = sc.nextBoolean();
+```
+
+Input
+
+```
+true
+```
+
+or
+
+```
+false
+```
+
+---
+
+## String (One Word)
+
+```java
+String name = sc.next();
+```
+
+Input
+
+```
+Krishna
+```
+
+Output
+
+```
+Krishna
+```
+
+---
+
+# Limitation of next()
+
+`next()` reads only one word.
+
+Example
+
+Input
+
+```
+Krishna Priya
+```
+
+Code
+
+```java
+String name = sc.next();
+```
+
+Output
+
+```
+Krishna
+```
+
+Reason
+
+`next()` stops reading when it encounters whitespace (space, tab, or newline).
+
+To read a full line, use `nextLine()` (covered in the next lesson).
+
+---
+
+# Complete Example
+
+```java
+import java.util.Scanner;
+
+public class InputDemo {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+
+        int age = sc.nextInt();
+
+        System.out.println("Age = " + age);
+
+        sc.close();
+    }
+
+}
+```
+
+Output
+
+```
+Enter your age:
+22
+
+Age = 22
+```
+
+---
+
+# Memory Representation
+
+Program
+
+```java
+Scanner sc = new Scanner(System.in);
+
+int age = sc.nextInt();
+```
+
+Stack Memory
+
+```
+sc
+↓
+
+Reference
+
+age
+↓
+
+22
+```
+
+Heap Memory
+
+```
+Scanner Object
+```
+
+The reference variable is stored in the stack.
+
+The actual Scanner object is stored in the heap.
+
+---
+
+# Closing Scanner
+
+```java
+sc.close();
+```
+
+Purpose
+
+- Releases the input resource.
+- Considered good programming practice.
+- Important in real-world applications.
+
+---
+
+# DSA Connection
+
+Almost every DSA problem follows this pattern:
+
+```
+Read Input
+
+↓
+
+Process Data
+
+↓
+
+Print Output
+```
+
+Without taking input correctly, solving programming problems becomes difficult.
+
+---
+
+# Industry Connection
+
+Scanner is commonly used in:
+
+- Console Applications
+- Java Practice Programs
+- Coding Interviews
+- Learning Core Java
+
+In enterprise applications, user input is usually received from web forms or APIs instead of the keyboard.
+
+---
+
+# Important Definitions
+
+## Scanner Class
+
+A predefined Java class used to read input from the keyboard or other input sources.
+
+---
+
+## Package
+
+A package is a collection of related classes and interfaces.
+
+Scanner belongs to:
+
+```
+java.util
+```
+
+---
+
+## Reference Variable
+
+A variable that stores the address of an object.
+
+Example
+
+```java
+Scanner sc;
+```
+
+---
+
+## System.in
+
+The standard input stream, usually connected to the keyboard.
+
+---
+
+# Common Interview Questions
+
+1. What is the Scanner class?
+2. Which package contains Scanner?
+3. Why do we import Scanner?
+4. Explain `Scanner sc = new Scanner(System.in);`
+5. What does `new` do?
+6. What is `System.in`?
+7. Which method reads an integer?
+8. Which method reads a double?
+9. Which method reads a boolean?
+10. What is the limitation of `next()`?
+11. Why do we call `sc.close()`?
+
+---
+
+# Common Interview Mistakes
+
+❌ Forgetting to import Scanner.
+
+---
+
+❌ Using `nextInt()` when the input is text.
+
+```java
+int age = sc.nextInt();
+```
+
+Input
+
+```
+Twenty
+```
+
+Results in an `InputMismatchException`.
+
+---
+
+❌ Expecting `next()` to read a full name.
+
+Input
+
+```
+Krishna Priya
+```
+
+Output
+
+```
+Krishna
+```
+
+---
+
+# Commands You Should Know
+
+Compile
+
+```bash
+javac InputDemo.java
+```
+
+Run
+
+```bash
+java InputDemo
+```
+
+---
+
+# Revision Box
+
+✅ Scanner → Reads user input.
+
+✅ Package → java.util
+
+✅ Import → import java.util.Scanner;
+
+✅ new → Creates object in heap.
+
+✅ sc → Reference variable.
+
+✅ System.in → Standard input stream.
+
+✅ nextInt() → Integer
+
+✅ nextDouble() → Double
+
+✅ nextFloat() → Float
+
+✅ nextLong() → Long
+
+✅ nextBoolean() → Boolean
+
+✅ next() → Reads one word.
+
+✅ close() → Releases resources.
+
+---
+
+# Summary
+
+Today I learned how to take user input in Java using the Scanner class. I understood why Scanner is required, how to import it, create a Scanner object, and read different data types such as int, double, float, long, boolean, and String. I also learned that the Scanner object is stored in the heap while its reference variable is stored in the stack, why `next()` reads only one word, and why `sc.close()` is considered good programming practice.
