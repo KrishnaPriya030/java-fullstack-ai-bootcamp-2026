@@ -1,0 +1,474 @@
+# Day 21 - Switch Statement
+
+## Module
+
+Phase 1 - Core Java + DSA Foundation
+
+---
+
+# Prerequisites
+
+- Control Statements
+- if Statement
+- if-else Statement
+- else-if Ladder
+
+---
+
+# Learning Objectives
+
+- Switch Statement
+- case
+- break
+- default
+- Fall-through
+- Enhanced Switch
+- if-else vs switch
+
+---
+
+# What is a Switch Statement?
+
+The **switch statement** is a decision-making statement that selects one block of code to execute from multiple possible options based on the value of an expression.
+
+It is mainly used when there are **fixed choices**.
+
+---
+
+# Why Do We Need Switch?
+
+Using multiple `if-else` statements for fixed choices makes the program lengthy and difficult to read.
+
+The `switch` statement makes the code cleaner and easier to maintain.
+
+Example
+
+Instead of
+
+```java
+if(day == 1){
+    System.out.println("Monday");
+}
+else if(day == 2){
+    System.out.println("Tuesday");
+}
+else if(day == 3){
+    System.out.println("Wednesday");
+}
+```
+
+We can write
+
+```java
+switch(day){
+
+    case 1:
+        System.out.println("Monday");
+        break;
+
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    case 3:
+        System.out.println("Wednesday");
+        break;
+
+    default:
+        System.out.println("Invalid Day");
+}
+```
+
+---
+
+# Syntax
+
+```java
+switch(expression){
+
+    case value1:
+        // statements
+        break;
+
+    case value2:
+        // statements
+        break;
+
+    default:
+        // statements
+}
+```
+
+---
+
+# Components of Switch
+
+## switch(expression)
+
+The expression is evaluated only once.
+
+Example
+
+```java
+switch(day)
+```
+
+---
+
+## case
+
+Each case represents one possible value.
+
+Example
+
+```java
+case 1:
+```
+
+If the expression value is `1`, this block executes.
+
+---
+
+## break
+
+Terminates the switch statement after executing the matching case.
+
+Without `break`, Java continues executing the remaining cases.
+
+---
+
+## default
+
+Executes when none of the cases match.
+
+It is similar to the `else` block in an `if-else` statement.
+
+---
+
+# Example
+
+```java
+int day = 2;
+
+switch(day){
+
+    case 1:
+        System.out.println("Monday");
+        break;
+
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    case 3:
+        System.out.println("Wednesday");
+        break;
+
+    default:
+        System.out.println("Invalid Day");
+}
+```
+
+Output
+
+```
+Tuesday
+```
+
+---
+
+# Dry Run
+
+```
+day = 2
+
+↓
+
+Case 1 ?
+
+No
+
+↓
+
+Case 2 ?
+
+Yes
+
+↓
+
+Print Tuesday
+
+↓
+
+break
+
+↓
+
+Exit Switch
+```
+
+---
+
+# Fall-through
+
+## Definition
+
+Fall-through is the behavior where execution continues into the following cases because there is no `break` statement.
+
+Example
+
+```java
+int day = 2;
+
+switch(day){
+
+    case 1:
+        System.out.println("Monday");
+
+    case 2:
+        System.out.println("Tuesday");
+
+    case 3:
+        System.out.println("Wednesday");
+}
+```
+
+Output
+
+```
+Tuesday
+Wednesday
+```
+
+Reason
+
+Since there is no `break`, execution continues to the remaining cases.
+
+---
+
+# Enhanced Switch (Java 14+)
+
+Modern Java introduced the enhanced switch syntax.
+
+Example
+
+```java
+switch(day){
+
+    case 1 -> System.out.println("Monday");
+
+    case 2 -> System.out.println("Tuesday");
+
+    case 3 -> System.out.println("Wednesday");
+
+    default -> System.out.println("Invalid");
+}
+```
+
+Advantages
+
+- Cleaner syntax
+- No `break` required
+- No fall-through
+- Easier to read
+
+---
+
+# Switch vs if-else
+
+| if-else | switch |
+|----------|---------|
+| Used for ranges and complex conditions | Used for fixed values |
+| Supports relational operators (`>`, `<`, `>=`) | Matches exact values |
+| Can become lengthy | Cleaner for multiple choices |
+
+Examples
+
+Use `if-else`
+
+```java
+if(marks >= 90)
+```
+
+Use `switch`
+
+```java
+switch(choice)
+```
+
+---
+
+# Time Complexity
+
+The switch statement checks cases until a matching case is found.
+
+Worst-case Time Complexity
+
+```
+O(n)
+```
+
+where **n** is the number of cases.
+
+For a small fixed number of cases, it behaves like constant time in practice.
+
+---
+
+# DSA Connection
+
+Switch statements are commonly used in:
+
+- Menu-driven programs
+- Calculator Applications
+- ATM Systems
+- Testing Algorithms
+
+Example
+
+```
+1 → Insert
+
+2 → Delete
+
+3 → Search
+
+4 → Exit
+```
+
+---
+
+# Industry Connection
+
+Switch statements are used in
+
+- ATM Software
+- Restaurant Billing Systems
+- Banking Applications
+- POS Systems
+- Console Applications
+- State-based Logic
+
+---
+
+# Important Definitions
+
+## Switch Statement
+
+A decision-making statement that executes one block of code based on the value of an expression.
+
+---
+
+## Case
+
+Represents one possible value inside a switch statement.
+
+---
+
+## Break
+
+Terminates the switch statement after the matching case executes.
+
+---
+
+## Default
+
+Executes when no case matches.
+
+---
+
+## Fall-through
+
+The execution of subsequent cases because the `break` statement is omitted.
+
+---
+
+## Enhanced Switch
+
+A modern switch syntax introduced in Java 14 that uses the `->` operator and prevents fall-through.
+
+---
+
+# Common Interview Questions
+
+1. What is a switch statement?
+2. Why is switch used?
+3. Difference between if-else and switch.
+4. What is the purpose of break?
+5. What happens if break is omitted?
+6. What is fall-through?
+7. What is the default case?
+8. What is the enhanced switch statement?
+9. Can switch replace every if-else statement? Why?
+
+---
+
+# Common Interview Mistakes
+
+❌ Forgetting `break`
+
+```java
+case 1:
+    System.out.println("One");
+```
+
+May cause fall-through.
+
+---
+
+❌ Using switch for ranges
+
+```java
+switch(marks >= 40)
+```
+
+Wrong.
+
+Use `if-else`.
+
+---
+
+❌ Omitting the default case
+
+Always include a default block to handle unexpected values.
+
+---
+
+# Commands You Should Know
+
+Compile
+
+```bash
+javac SwitchDemo.java
+```
+
+Run
+
+```bash
+java SwitchDemo
+```
+
+---
+
+# Revision Box
+
+✅ Switch → Decision-making statement.
+
+✅ Used for fixed choices.
+
+✅ case → Represents a possible value.
+
+✅ break → Terminates the switch.
+
+✅ default → Executes when no case matches.
+
+✅ Fall-through → Happens when break is omitted.
+
+✅ Enhanced switch → Uses `->`, no break, no fall-through.
+
+✅ Use if-else for ranges.
+
+---
+
+# Summary
+
+Today I learned the Java `switch` statement, which is used for decision-making when there are fixed choices. I understood the purpose of `case`, `break`, and `default`, learned how fall-through occurs when `break` is omitted, and explored the enhanced switch syntax introduced in Java 14. I also learned when to use `switch` instead of `if-else` and its common applications in menu-driven and real-world programs.
